@@ -1,0 +1,3 @@
+using js, we giving logic to a problem .
+
+console.log - used to log a message to the console

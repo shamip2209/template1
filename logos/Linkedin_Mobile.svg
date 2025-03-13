@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.383" height="13.383" viewBox="0 0 13.383 13.383">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.457" y1="-0.83" x2="1.192" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#11998e"/>
+      <stop offset="1" stop-color="#38ef7d"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_awesome-linkedin" data-name="Icon awesome-linkedin" d="M12.427,2.25H.953A.96.96,0,0,0,0,3.215V14.668a.96.96,0,0,0,.953.965H12.427a.963.963,0,0,0,.956-.965V3.215A.963.963,0,0,0,12.427,2.25ZM4.045,13.721H2.061V7.334H4.048v6.387ZM3.053,6.462A1.15,1.15,0,1,1,4.2,5.312a1.151,1.151,0,0,1-1.15,1.15Zm8.427,7.259H9.5V10.615c0-.741-.015-1.694-1.031-1.694-1.034,0-1.192.807-1.192,1.64v3.161H5.291V7.334h1.9v.872H7.22A2.089,2.089,0,0,1,9.1,7.176c2.007,0,2.381,1.323,2.381,3.044Z" transform="translate(0 -2.25)" fill="url(#linear-gradient)"/>
+</svg>
