@@ -5883,7 +5883,10 @@
     background-color: #fff;
     position: relative;
   }
-  
+
+  * {box-sizing:border-box}
+
+
   .pub-section.hero {
     z-index: 4;
     color: #fff;
