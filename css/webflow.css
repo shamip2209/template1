@@ -948,6 +948,8 @@
     right: 0;
     height: 100%;
     white-space: nowrap;
+
+    
   }
   .w-slide {
     position: relative;
@@ -957,6 +959,7 @@
     height: 100%;
     white-space: normal;
     text-align: left;
+    
   }
   .w-slider-nav {
     position: absolute;
@@ -1809,3 +1812,13 @@
     top: 0;
     left: 0;
   }
+
+  /* @keyframes scrollSlider {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  } */
+  .w-slider-mask .slide-11 {
+    flex: 0 0 auto;
+    width: 100%;
+    animation: scrollSlider 10s linear infinite;
+  } 

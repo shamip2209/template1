@@ -1,0 +1,31 @@
+.link-hero-logos-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .link-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .link-hero-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .logos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .link-logo {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
