@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Coverflow Carousel with Auto Slide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+      }
+       .ug-slide-3 {
+          width: 100%;
+
+          padding: 12px;
+          box-sizing: border-box;
+        }
+
+        .w-slide {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            text-align: left;
+        }
+          
+        .user-group-card {
+          grid-column-gap: 16px;
+          grid-row-gap: 20px;
+          border-radius: 6px;
+          grid-template-rows: auto auto;
+          grid-template-columns: 1fr;
+          grid-auto-columns: 1fr;
+          justify-items: center;
+          height: 100%;
+          padding: 24px;
+          display: grid;
+        }
+          
+        .ug-icon {
+          width: 50px;
+          height: 50px;
+          border-radius: 80px;
+        }
+
+        .ug-role {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        .ug-point-5 {
+          background-image: url('../images/bluetick.png');
+          background-position: 0 5px;
+          background-repeat: no-repeat;
+          background-size: 18px;
+          width: 100%;
+          padding-left: 32px;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+        }
+
+        .ug-point-5.learn-point {
+          background-image: url('../images/bluetick.png');
+          background-repeat: no-repeat;
+          background-size: 18px;
+          margin-bottom: 16px;
+          font-family: DM Sans, sans-serif;
+        }
+        
+        .ug-thumb {
+          grid-column-gap: 8px;
+          grid-row-gap: 16px;
+          border: 1px solid #2971cf;
+          border-radius: 6px;
+          grid-template-rows: auto;
+          grid-template-columns: 1fr auto;
+          grid-auto-columns: 1fr;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 8px;
+          display: grid;
+        }
+
+        .ug-person-name {
+          margin-bottom: 4px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        .ug-designation {
+          font-size: 12px;
+        }
+        
+        .w-inline-block {
+          max-width: 100%;
+          display: inline-block;
+        }
+        
+        .ug-img {
+          border-radius: 4px;
+          width: 50px;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .swiper {
+          height: 100%;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+          width: 300px;
+          height: 420px;
+          background-position: center;
+          background-size: cover;
+          background-color: #ffffff;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+          border: 2px ;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+        }
+
+        .swiper-slide-active {
+            box-shadow: 0 10px 25px #f5f2f2;
+            border: 2px #666;
+        }
+
+        /* Progress dots */
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            background: #71a7b8;
+            opacity: 1;
+            transition: transform 0.3s ease-in-out;
+          
+        }
+
+        .swiper-pagination-bullet-active {
+            background: linear-gradient(60deg, #004179, #00acb4);
+            transform: scale(1.3);
+        }
+
+        /* Line connecting dots */
+        .swiper-pagination {
+            position: relative;
+            bottom: -10px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        /* Navigation buttons */
+       
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 20px;
+        }
+        
+        /* Add perspective for 3D effect */
+        .swiper-container {
+            perspective: 1200px;
+        }
+        /* Hide all dots by default on smaller screens */
+@media (max-width: 480px) {
+  
+
+    .swiper-pagination-bullet {
+        display: none;
+    }
+
+    /* Show only the first three dots */
+    .swiper-pagination-bullet:nth-child(-n+3) {
+        display: inline-block;
+    }
+    .swiper-pagination-bullet-active {
+            background: linear-gradient(60deg, #004179, #00acb4);
+            transform: scale(1.3);
+        }
+}
+    </style>
+</head>
+<body >
+  <div class="carousel-container">
+      <div class="swiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Student icon" class="ug-icon">
+                    <div class="ug-role">Students</div>
+                    <div class="ug-point-5">Get found by companies for internships / jobs</div>
+                    <div class="ug-point-5">Get replies from top-shelf professionals</div>
+                    <div class="ug-point-5">Get freelance / part-time opportunities</div>
+                    <div class="ug-point-5">Get world-class job opportunities</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Aaradhya Vats</div>
+                        <div class="ug-designation">MBA Student</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic1.jpg" loading="lazy" alt="Student profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Professional icon" class="ug-icon">
+                    <div class="ug-role">Professionals</div>
+                    <div class="ug-point-5">Let companies find you for work</div>
+                    <div class="ug-point-5">Land freelance gigs passively</div>
+                    <div class="ug-point-5">Stand out from others</div>
+                    <div class="ug-point-5">Court public speaking gigs</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Hitarth Saini</div>
+                        <div class="ug-designation">Marketing Head, MoneyTap</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic2.jpg" loading="lazy" alt="Professional profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Entrepreneur icon" class="ug-icon">
+                    <div class="ug-role">Entrepreneurs</div>
+                    <div class="ug-point-5">Get inbound leads and clients</div>
+                    <div class="ug-point-5">Get found by investors</div>
+                    <div class="ug-point-5">Skyrocket authority and credibility</div>
+                    <div class="ug-point-5">Build strong PR organically</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Guillaume Moubeche</div>
+                        <div class="ug-designation">CEO, Lemlist.</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic2.jpg" loading="lazy" alt="Entrepreneur profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Freelancer icon" class="ug-icon">
+                    <div class="ug-role">Freelancers</div>
+                    <div class="ug-point-5">Generate open-wallet leads</div>
+                    <div class="ug-point-5">Get world-class clients organically</div>
+                    <div class="ug-point-5">Skyrocket credibility and authority</div>
+                    <div class="ug-point-5">Bag more responses from prospects</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Princy Lalawat</div>
+                        <div class="ug-designation">Freelance Content Writer</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic3.avif" loading="lazy" alt="Freelancer profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Coach icon" class="ug-icon">
+                    <div class="ug-role">Coach</div>
+                    <div class="ug-point-5">Skyrocket credibility and trust</div>
+                    <div class="ug-point-5">Land new leads and customers</div>
+                    <div class="ug-point-5">Have conversation at scale using content</div>
+                    <div class="ug-point-5">Skyrocket visibility and authority</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Sadaf Tahir</div>
+                        <div class="ug-designation">Corporate Trainer</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic5.avif" loading="lazy" alt="Coach profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Sales icon" class="ug-icon">
+                    <div class="ug-role">Sales Professional</div>
+                    <div class="ug-point-5">Find top-shelf active prospects</div>
+                    <div class="ug-point-5">Increased replies from prospects</div>
+                    <div class="ug-point-5">Land content-driven leads</div>
+                    <div class="ug-point-5">Skyrocket credibility and authority</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Achyut Menon</div>
+                        <div class="ug-designation">MD, Options Executive</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic6.avif" loading="lazy" alt="Sales profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+          <!-- Navigation buttons -->
+          
+          <br>
+          <!-- Pagination dots -->
+          <div class="swiper-pagination"></div>
+      </div>
+  </div>
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper', {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                if (window.innerWidth < 600) {
+                    // Only show dots for slides 4, 5, and 6 (Index: 3, 4, 5)
+                    if (index >= 3 && index < 6) {
+                        return `<span class="${className}" data-index="${index}"></span>`;
+                    } else {
+                        return '';
+                    }
+                }
+                return `<span class="${className}" data-index="${index}"></span>`;
+            }
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        breakpoints: {
+            480: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            }
+        }
+    });
+
+    // Scale up the active dot
+    swiper.on('slideChange', function () {
+        document.querySelectorAll('.swiper-pagination-bullet').forEach((dot, i) => {
+            dot.style.transform = swiper.realIndex % 3 === i ? 'scale(1.3)' : 'scale(1)';
+        });
+    });
+});
+
+
+</script>
+
+</body>
+</html>
