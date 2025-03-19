@@ -1,1112 +1,366 @@
-
-<html data-wf-page="65e7f6ac85fd9143fb037078" data-wf-site="5fdb2866020c200cd7fd7369" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>LinkedIn 5Day Generic(new)</title>
-  <meta content="LinkedIn 5Day Generic(new)" property="og:title">
-  <meta content="LinkedIn 5Day Generic(new)" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/growthschool.webflow.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","IBM Plex Sans:300,regular,500,600,700","IBM Plex Sans Condensed:300,regular,500,600,700"]  }});</script>
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
-  <!--  anti-flicker snippet (recommended)   -->
-  <style>.async-hide { opacity: 0 !important} </style>
-  <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-})(window,document.documentElement,'async-hide','dataLayer',4000,
-{'GTM-5GL6KVS':true});</script>
-  <!--  Google Tag Manager  -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5GL6KVS');</script>
-  <!--  End Google Tag Manager  -->
-  <script type="text/javascript">
-(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
-MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
-// Enabling the debug mode flag is useful during implementation,
-// but it's recommended you remove it for production
-mixpanel.init('5059bb663c207eecebbdcf902625dd8a', {debug: true}); 
-</script>
-  <script id="_webengage_script_tag" type="text/javascript">
-  var webengage;
-  ! function(w, e, b, n, g) {
-    function o(e, t) {
-      e[t[t.length - 1]] = function() {
-        r.__queue.push([t.join("."), arguments])
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Coverflow Carousel with Auto Slide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
       }
-    }
-    var i, s, r = w[b],
-      z = " ",
-      l = "init options track screen onReady".split(z),
-      a = "feedback survey notification".split(z),
-      c = "options render clear abort".split(z),
-      p = "Open Close Submit Complete View Click".split(z),
-      u = "identify login logout setAttribute".split(z);
-    if (!r || !r.__v) {
-      for (w[b] = r = {
-          __queue: [],
-          __v: "6.0",
-          user: {}
-        }, i = 0; i < l.length; i++) o(r, [l[i]]);
-      for (i = 0; i < a.length; i++) {
-        for (r[a[i]] = {}, s = 0; s < c.length; s++) o(r[a[i]], [a[i], c[s]]);
-        for (s = 0; s < p.length; s++) o(r[a[i]], [a[i], "on" + p[s]])
-      }
-      for (i = 0; i < u.length; i++) o(r.user, ["user", u[i]]);
-      setTimeout(function() {
-        var f = e.createElement("script"),
-          d = e.getElementById("_webengage_script_tag");
-        f.type = "text/javascript",
-          f.async = !0,
-          f.src = ("https:" == e.location.protocol ? "https://widgets.in.webengage.com" : "http://widgets.in.webengage.com") + "/js/webengage-min-v-6.0.js",
-          d.parentNode.insertBefore(f, d);
-      })
-    }
-  }(window, document, "webengage");
-  webengage.init('in~~c2ab368c');
-  webengage.track("Landing Page Viewed",{});
-</script><!--  Facebook Pixel Code  -->
-  <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '344970902774753');
-fbq('track', 'PageView');
-</script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=344970902774753&ev=PageView&noscript=1"></noscript>
-  <!--  End Facebook Pixel Code  -->
-  <div id="invtrflfloatbtn"></div>
-  <script>
-var ir = ir || function(){(window.ir.q = window.ir.q || []).push(arguments)};
-var invite_referrals = window.invite_referrals || {}; (function() { 
-    invite_referrals.auth = { bid_e :'F40B3C3FA99FC6AEE28CE5E118E6DA2C',
-                                bid : '49017', 
-                                t : '420', 
-                                email : '', userParams : {'fname': ''}};    
-                                invite_referrals.async = false;
-var script = document.createElement('script');
-script.src = "//cdn.invitereferrals.com/js/invite-referrals-1.0.js";
-var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry); })();
-</script>
+       .ug-slide-3 {
+          width: 100%;
+
+          padding: 12px;
+          box-sizing: border-box;
+        }
+
+        .w-slide {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            text-align: left;
+        }
+          
+        .user-group-card {
+          grid-column-gap: 16px;
+          grid-row-gap: 20px;
+          border-radius: 6px;
+          grid-template-rows: auto auto;
+          grid-template-columns: 1fr;
+          grid-auto-columns: 1fr;
+          justify-items: center;
+          height: 100%;
+          padding: 24px;
+          display: grid;
+        }
+          
+        .ug-icon {
+          width: 50px;
+          height: 50px;
+          border-radius: 80px;
+        }
+
+        .ug-role {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        .ug-point-5 {
+          background-image: url('../images/bluetick.png');
+          background-position: 0 5px;
+          background-repeat: no-repeat;
+          background-size: 18px;
+          width: 100%;
+          padding-left: 32px;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+        }
+
+        .ug-point-5.learn-point {
+          background-image: url('../images/bluetick.png');
+          background-repeat: no-repeat;
+          background-size: 18px;
+          margin-bottom: 16px;
+          font-family: DM Sans, sans-serif;
+        }
+        
+        .ug-thumb {
+          grid-column-gap: 8px;
+          grid-row-gap: 16px;
+          border: 1px solid #2971cf;
+          border-radius: 6px;
+          grid-template-rows: auto;
+          grid-template-columns: 1fr auto;
+          grid-auto-columns: 1fr;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 8px;
+          display: grid;
+        }
+
+        .ug-person-name {
+          margin-bottom: 4px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        .ug-designation {
+          font-size: 12px;
+        }
+        
+        .w-inline-block {
+          max-width: 100%;
+          display: inline-block;
+        }
+        
+        .ug-img {
+          border-radius: 4px;
+          width: 50px;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .swiper {
+          height: 100%;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+          width: 300px;
+          height: 420px;
+          background-position: center;
+          background-size: cover;
+          background-color: #ffffff;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+          border: 2px ;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+        }
+
+        .swiper-slide-active {
+            box-shadow: 0 10px 25px #f5f2f2;
+            border: 2px #666;
+        }
+
+        /* Progress dots */
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            background: #71a7b8;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: linear-gradient(60deg, #004179, #00acb4);
+            transform: scale(1.3);
+        }
+
+        /* Line connecting dots */
+        .swiper-pagination {
+            position: relative;
+            bottom: -10px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        /* Navigation buttons */
+       
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 20px;
+        }
+        
+        /* Add perspective for 3D effect */
+        .swiper-container {
+            perspective: 1200px;
+        }
+    </style>
 </head>
-<body class="body-5">
-  <div class="html-embed-51 w-embed w-iframe"><!--  Google Tag Manager (noscript)  -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GL6KVS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!--  End Google Tag Manager (noscript)  -->
+<body >
+  <div class="carousel-container">
+      <div class="swiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Student icon" class="ug-icon">
+                    <div class="ug-role">Students</div>
+                    <div class="ug-point-5">Get found by companies for internships / jobs</div>
+                    <div class="ug-point-5">Get replies from top-shelf professionals</div>
+                    <div class="ug-point-5">Get freelance / part-time opportunities</div>
+                    <div class="ug-point-5">Get world-class job opportunities</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Aaradhya Vats</div>
+                        <div class="ug-designation">MBA Student</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic1.jpg" loading="lazy" alt="Student profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Professional icon" class="ug-icon">
+                    <div class="ug-role">Professionals</div>
+                    <div class="ug-point-5">Let companies find you for work</div>
+                    <div class="ug-point-5">Land freelance gigs passively</div>
+                    <div class="ug-point-5">Stand out from others</div>
+                    <div class="ug-point-5">Court public speaking gigs</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Hitarth Saini</div>
+                        <div class="ug-designation">Marketing Head, MoneyTap</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic2.jpg" loading="lazy" alt="Professional profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Entrepreneur icon" class="ug-icon">
+                    <div class="ug-role">Entrepreneurs</div>
+                    <div class="ug-point-5">Get inbound leads and clients</div>
+                    <div class="ug-point-5">Get found by investors</div>
+                    <div class="ug-point-5">Skyrocket authority and credibility</div>
+                    <div class="ug-point-5">Build strong PR organically</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Guillaume Moubeche</div>
+                        <div class="ug-designation">CEO, Lemlist.</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic2.jpg" loading="lazy" alt="Entrepreneur profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Freelancer icon" class="ug-icon">
+                    <div class="ug-role">Freelancers</div>
+                    <div class="ug-point-5">Generate open-wallet leads</div>
+                    <div class="ug-point-5">Get world-class clients organically</div>
+                    <div class="ug-point-5">Skyrocket credibility and authority</div>
+                    <div class="ug-point-5">Bag more responses from prospects</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Princy Lalawat</div>
+                        <div class="ug-designation">Freelance Content Writer</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic3.avif" loading="lazy" alt="Freelancer profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Student icon" class="ug-icon">
+                    <div class="ug-role">Students</div>
+                    <div class="ug-point-5">Get found by companies for internships / jobs</div>
+                    <div class="ug-point-5">Get replies from top-shelf professionals</div>
+                    <div class="ug-point-5">Get freelance / part-time opportunities</div>
+                    <div class="ug-point-5">Get world-class job opportunities</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Aaradhya Vats</div>
+                        <div class="ug-designation">MBA Student</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic4.avif" loading="lazy" alt="Student profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Coach icon" class="ug-icon">
+                    <div class="ug-role">Coach</div>
+                    <div class="ug-point-5">Skyrocket credibility and trust</div>
+                    <div class="ug-point-5">Land new leads and customers</div>
+                    <div class="ug-point-5">Have conversation at scale using content</div>
+                    <div class="ug-point-5">Skyrocket visibility and authority</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Sadaf Tahir</div>
+                        <div class="ug-designation">Corporate Trainer</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic5.avif" loading="lazy" alt="Coach profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ug-slide-3 w-slide">
+                  <div class="user-group-card"><img src="cover/bluemanwithgold-removebg-preview.svg" loading="lazy" alt="Sales icon" class="ug-icon">
+                    <div class="ug-role">Sales Professional</div>
+                    <div class="ug-point-5">Find top-shelf active prospects</div>
+                    <div class="ug-point-5">Increased replies from prospects</div>
+                    <div class="ug-point-5">Land content-driven leads</div>
+                    <div class="ug-point-5">Skyrocket credibility and authority</div>
+                    <div class="ug-thumb">
+                      <div>
+                        <div class="ug-person-name">Achyut Menon</div>
+                        <div class="ug-designation">MD, Options Executive</div>
+                      </div>
+                      <a href="#" class="w-inline-block"><img src="images/pic6.avif" loading="lazy" alt="Sales profile" class="ug-img"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+          <!-- Navigation buttons -->
+          
+          <br>
+          <!-- Pagination dots -->
+          <div class="swiper-pagination"></div>
+      </div>
   </div>
-  <div class="div-block-549">
-    <div class="link-section hero public">
-      <div class="html-embed-18 w-embed w-script">
-        <form>
-          <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HS4qQr5WMWZhrS" async=""> </script>
-        </form>
-      </div>
-      <div class="link-container mr-90">
-        <div class="link-title-container">
-          <h1 class="link-title pub">Master the <span class="link-title-highlight">AI powered Strategies</span><span class="link-title-highlight"> to Skyrocket your LinkedIn </span><br>In just 5 days!</h1>
-          <div class="link-subtitle">Unlock the potential of <span class="link-title-highlight">AI</span> to boost your LinkedIn Growth and learn the same strategies that won me over <span class="link-title-highlight">400K+ followers</span>, and <span class="link-title-highlight">1000s of leads</span> for FREE bringing in <span class="link-title-highlight">thousands of dollars</span> on a monthly basis from Linkedin.</div>
-        </div>
-        <div class="link-hero-container">
-          <div class="link-hero-leftside">
-            <div class="link-quickbits-grid">
-              <div class="link-quickbit"><img src="images/Vector-2_10.svg" loading="lazy" alt="" class="ent-quickbit-icon">
-                <div class="ent-quickbit-text">5 Days</div>
-              </div>
-              <div class="link-quickbit"><img src="images/Vector_17.svg" loading="lazy" alt="" class="ent-quickbit-icon">
-                <div class="ent-quickbit-text">Pre-recorded videos + Zoom QnA </div>
-              </div>
-              <div class="link-quickbit"><img src="images/Vector-3_10.svg" loading="lazy" alt="" class="ent-quickbit-icon">
-                <div class="ent-quickbit-text">Jan 21st, 2024</div>
-              </div>
-              <div class="link-quickbit"><img src="images/Vector-1_15.svg" loading="lazy" alt="" class="ent-quickbit-icon">
-                <div class="ent-quickbit-text">7 PM IST ( 3 Hour Stream)</div>
-              </div>
-            </div>
-            <div class="link-hero-instructor-content">
-              <h2 class="link-hero-instructor-nam">Vaibhav Sisinty</h2>
-              <div class="link-hero-instructor-description">LinkedIn Growth Expert,<br>Growth Hacker,<br>Ex- Uber &amp; Klook</div>
-            </div>
-            <div class="div-block-166"><img src="images/linkedinFollowers.51211cbe.svg" loading="lazy" alt="" class="image-97"><img src="images/Frame-1274.svg" loading="lazy" alt="" class="image-97"></div>
-          </div>
-          <div id="w-node-e0f291c9-012e-2aa9-a3ce-1c392434fe24-fb037078" class="link-hero-rightside">
-            <div style="padding-top:56.27659574468085%" class="link-hero-video w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F645300445%3Fh%3D4c8e561dda%26app_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F645300445%2F4c8e561dda&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1297959690-e3058771ece32e64e4aa8522218cb9f8b76e3480f34c23c02_1280&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo" scrolling="no" title="Vimeo embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe></div>
-            <div class="link-hero-cta-container">
-              <div class="link-hero-cta-subtext">Reserve a seat before <span class="register-on">August 22, 2022</span> to unlock <span class="pub-hero-cta-subtext-highlight">Bonuses worth ₹45,000</span></div>
-              <a data-payment="1" href="#" class="link-hero-cta payment-button w-inline-block">
-                <div class="ent-hero-cta-text">Reserve Seat for ₹<span class="final-price">249</span> <span class="you-cta-text-strike hide-this">₹1,999</span></div>
-              </a>
-              <div class="razorpay-embed w-embed"></div>
-              <div class="w-embed"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="link-hero-logos-container">
-        <div class="link-container">
-          <div class="link-hero-logos">
-            <div class="link-asdhuoa">
-              <div class="text-block-83">Featured In</div>
-            </div><img src="images/Group-2.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.796875px" srcset="images/Group-2-p-500.png 500w, images/Group-2.png 626w" alt="" class="link-logo"><img src="images/Group-10.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.796875px" srcset="images/Group-10-p-500.png 500w, images/Group-10.png 627w" alt="" class="link-logo"><img src="images/Group-9.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.8046875px" srcset="images/Group-9-p-500.png 500w, images/Group-9.png 627w" alt="" class="link-logo"><img src="images/Group-4.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.796875px" srcset="images/Group-4-p-500.png 500w, images/Group-4.png 626w" alt="" class="link-logo"><img src="images/Group-8.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.8046875px" srcset="images/Group-8-p-500.png 500w, images/Group-8.png 627w" alt="" class="link-logo"><img src="images/Group-7.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.796875px" srcset="images/Group-7-p-500.png 500w, images/Group-7.png 627w" alt="" class="link-logo"><img src="images/Group-6.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.796875px" srcset="images/Group-6-p-500.png 500w, images/Group-6.png 627w" alt="" class="link-logo"><img src="images/Group-5.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.8046875px" srcset="images/Group-5-p-500.png 500w, images/Group-5.png 627w" alt="" class="link-logo"><img src="images/Group-3.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.796875px" srcset="images/Group-3-p-500.png 500w, images/Group-3.png 626w" alt="" class="link-logo"><img src="images/Group-1.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 16vw, (max-width: 991px) 17vw, 176.8046875px" srcset="images/Group-1-p-500.png 500w, images/Group-1.png 626w" alt="" class="link-logo">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-8 top">
-      <div class="site-wrapper">
-        <div class="div-block-43">
-          <div class="link-metric user">
-            <div>
-              <div class="text-block-118">Attended the workshop</div>
-              <h1 class="heading-44"><span class="counter">40,000</span>+</h1>
-            </div>
-          </div>
-          <a href="#" class="lightbox-link-2 w-inline-block w-lightbox"><img src="images/play-button-croped_1play-button-croped.png" loading="lazy" alt="" class="image-29"><img src="images/vedika-leads-2_1.webp" loading="lazy" alt="" class="image-93">
-            <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/469314424",
-      "originalUrl": "https://vimeo.com/469314424",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/977085459_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F469314424%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F469314424&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F977085459_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-          </a>
-          <a href="#" class="lightbox-link-2 w-inline-block w-lightbox"><img src="images/alok-2_1.webp" loading="lazy" alt="" class="image-93"><img src="images/play-button-croped_1play-button-croped.png" loading="lazy" alt="" class="image-29">
-            <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/469311610",
-      "originalUrl": "https://vimeo.com/469311610",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/977080162_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F469311610%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F469311610&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F977080162_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-          </a>
-          <div id="w-node-_17e62552-1a59-98e4-1150-498794001011-fb037078" class="link-metric">
-            <div>
-              <div class="text-block-118">Avg Rating</div>
-              <h1 class="heading-44"><span class="counter">9.3</span>/10</h1>
-            </div>
-          </div>
-          <a href="#" class="lightbox-link-2 w-inline-block w-lightbox"><img src="images/aradhya_1.webp" loading="lazy" alt="" class="image-93"><img src="images/play-button-croped_1play-button-croped.png" loading="lazy" alt="" class="image-29">
-            <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/469315218",
-      "originalUrl": "https://vimeo.com/469315218",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/977087172_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F469315218%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F469315218&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F977087172_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-          </a>
-          <a href="#" class="lightbox-link-2 w-inline-block w-lightbox"><img src="images/achyut-2_1.webp" loading="lazy" alt="" class="image-93"><img src="images/play-button-croped_1play-button-croped.png" loading="lazy" alt="" class="image-29">
-            <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/469309239",
-      "originalUrl": "https://vimeo.com/469309239",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/977079305_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F469309239%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F469309239&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F977079305_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-          </a>
-        </div>
-        <div class="div-block-44">
-          <div class="text-block-28">Reserve a seat before <span class="register-on">December 29, 2020</span> to unlock Bonuses worth ₹45,000</div>
-          <div class="div-block-162"></div>
-          <a href="https://pay.growthschool.io/liw-checkout-3/" class="cta-big-3 w-inline-block">
-            <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny Rs 499 <span class="strike-span">Rs 1999</span></div>
-            <div class="cta-text-small-4">Starts July 26, Monday at comfort of your home</div>
-          </a>
-        </div>
-        <h2 class="section-heading-2">Please Check All Boxes<br>Where Your Answer Is YES!</h2>
-        <div class="w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form" data-wf-page-id="65e7f6ac85fd9143fb037078" data-wf-element-id="4835ca85-801e-8125-5e91-779e4fb0a896"><label class="w-checkbox checkbox-field">
-              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="checkbox">I want to build my personal brand but have no idea where to start</span>
-            </label><label class="w-checkbox checkbox-field">
-              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="checkbox-6" name="checkbox-6" data-name="Checkbox 6" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="checkbox-6">I want to get top quality leads without spending a dollar in ads</span>
-            </label><label class="w-checkbox checkbox-field">
-              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="checkbox-5" name="checkbox-5" data-name="Checkbox 5" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="checkbox-5">I want prospects or recruiters to approach me instead of me you approaching them</span>
-            </label><label class="w-checkbox checkbox-field">
-              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="checkbox-4" name="checkbox-4" data-name="Checkbox 4" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="checkbox-4">I want to generate more leads for my business but have no idea how to do it</span>
-            </label><label class="w-checkbox checkbox-field">
-              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="checkbox-3" name="checkbox-3" data-name="Checkbox 3" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="checkbox-3">I am trying to figure out a way to reach more people organically but failing to do so</span>
-            </label><label class="w-checkbox checkbox-field">
-              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="checkbox-2">I’m convinced that I need to leverage the power of LinkedIn but don&#x27;t know how to get started</span>
-            </label></form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
-        <div class="checkox-context-3">If you checked ANY of the boxes above, then you’re invited to join <span class="orange-text-span">The 5 Day Transformative LinkedIn Workshop</span>. If you don’t believe me, just look at the kind of results my students have been getting:</div>
-        <div data-delay="3000" data-animation="slide" class="slider-4 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-          <div class="mask-6 w-slider-mask">
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20201012-012848_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/IMG_20200908_235512_385-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/IMG_20200909_224532_351-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/IMG_20200910_004751_767-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/IMG_20200908_040854_751-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/IMG_20200915_025141_214-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/IMG_20200918_182441_388-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20200908-235446_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/IMG_20201010_120341_055-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20201009-140529_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20201001-053628_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20201001-220244_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20201001-220244_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20201009-140529_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-            <div class="slide-11 w-slide"><img src="images/Screenshot_20201012-001628_Instagram-1.png" loading="lazy" alt="" class="ss-img"></div>
-          </div>
-          <div class="slider-arrow w-slider-arrow-left">
-            <div class="icon-4 w-icon-slider-left"></div>
-          </div>
-          <div class="slider-arrow w-slider-arrow-right">
-            <div class="icon-4 w-icon-slider-right"></div>
-          </div>
-          <div class="w-slider-nav w-round"></div>
-        </div>
-        <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
-          <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span> <span class="strike-span hide-this">Rs 1999</span></div>
-          <div class="cta-text-small-4">Starts July 26, Monday at comfort of your home</div>
-        </a>
-      </div>
-    </div>
-    <div class="section-9">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2 green-gradient-span">Still wondering if this workshop is for you?<br></h2>
-        <h3 class="section-subheading">First of all - No, LinkedIn is not only for people looking for jobs 😑 LinkedIn is a mecca when it comes to lead generation organically.<br></h3>
-        <div data-delay="3000" data-animation="slide" class="user-group-slider-2 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-          <div class="ug-slider-mask-3 w-slider-mask">
-            <div class="ug-slide-3 w-slide">
-              <div class="user-group-card"><img src="images/Group-4674-2.svg" loading="lazy" alt="" class="ug-icon">
-                <div class="ug-role">Entrepreneurs</div>
-                <div class="ug-point-5">Get inbound leads and clients</div>
-                <div class="ug-point-5">Get found by investors</div>
-                <div class="ug-point-5">Skyrocket authority and credibility</div>
-                <div class="ug-point-5">Build strong PR organically</div>
-                <div class="ug-thumb">
-                  <div>
-                    <div class="ug-person-name">Guillaume Moubeche</div>
-                    <div class="ug-designation">CEO, Lemlist.</div>
-                  </div>
-                  <a href="#" class="w-inline-block w-lightbox"><img src="images/entrepreneur-1-owx68kxrykuixkfkih7hznklrxztl4icnw7yl2bqt0_1entrepreneur-1-owx68kxrykuixkfkih7hznklrxztl4icnw7yl2bqt0.png" loading="lazy" alt="" class="ug-img">
-                    <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/497330295",
-      "originalUrl": "https://vimeo.com/497330295",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/1029210380_960.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F497330295%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F497330295&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1029210380_960.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="ug-slide-3 w-slide">
-              <div class="user-group-card"><img src="images/Group-321.svg" loading="lazy" alt="" class="ug-icon">
-                <div class="ug-role">Professionals</div>
-                <div class="ug-point-5">Let companies find you for work</div>
-                <div class="ug-point-5">Land freelance gigs passively</div>
-                <div class="ug-point-5">Stand out from others</div>
-                <div class="ug-point-5">Court public speaking gigs</div>
-                <div class="ug-thumb">
-                  <div>
-                    <div class="ug-person-name">Hitarth Saini</div>
-                    <div class="ug-designation">Marketing Head, MoneyTap</div>
-                  </div>
-                  <a href="#" class="w-inline-block w-lightbox"><img src="images/professional-owx673cz50t6jsle7c1rjj3bwzbwedlngj1a8aj6no_1professional-owx673cz50t6jsle7c1rjj3bwzbwedlngj1a8aj6no.png" loading="lazy" alt="" class="ug-img">
-                    <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/497330945",
-      "originalUrl": "https://vimeo.com/497330945",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/1029217969_960.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F497330945%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F497330945&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1029217969_960.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="ug-slide-3 w-slide">
-              <div class="user-group-card"><img src="images/Group-4674-2.svg" loading="lazy" alt="" class="ug-icon">
-                <div class="ug-role">Freelancers</div>
-                <div class="ug-point-5">Generate open-wallet leads</div>
-                <div class="ug-point-5">Get world-class clients organically</div>
-                <div class="ug-point-5">Skyrocket credibility and authority</div>
-                <div class="ug-point-5">Bag more responses from prospects</div>
-                <div class="ug-thumb">
-                  <div>
-                    <div class="ug-person-name">Princy Lalawat</div>
-                    <div class="ug-designation">Freelance Content Writer</div>
-                  </div>
-                  <a href="#" class="w-inline-block w-lightbox"><img src="images/freelancer-1-owx68qkt3l28v87dljn9em5dc980vb4qoo4vgq3dro_1freelancer-1-owx68qkt3l28v87dljn9em5dc980vb4qoo4vgq3dro.png" loading="lazy" alt="" class="ug-img">
-                    <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/469312972",
-      "originalUrl": "https://vimeo.com/469312972",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/977083765_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F469312972%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F469312972&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F977083765_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="ug-slide-3 w-slide">
-              <div class="user-group-card"><img src="images/Group-4672.svg" loading="lazy" alt="" class="ug-icon">
-                <div class="ug-role">Students</div>
-                <div class="ug-point-5">Get found by companies for internships / jobs</div>
-                <div class="ug-point-5">Get replies from top-shelf professionals</div>
-                <div class="ug-point-5">Get freelance / part-time opportunities</div>
-                <div class="ug-point-5">Get world-class job opportunities</div>
-                <div class="ug-thumb">
-                  <div>
-                    <div class="ug-person-name">Aaradhya Vats</div>
-                    <div class="ug-designation">MBA Student</div>
-                  </div>
-                  <a href="#" class="w-inline-block w-lightbox"><img src="images/student-1-owx690x16rgeexscx645o1jfvht27z9se3b7qro1v8_1student-1-owx690x16rgeexscx645o1jfvht27z9se3b7qro1v8.png" loading="lazy" alt="" class="ug-img">
-                    <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/469315218",
-      "originalUrl": "https://vimeo.com/469315218",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/977087172_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F469315218%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F469315218&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F977087172_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="ug-slide-3 w-slide">
-              <div class="user-group-card"><img src="images/Group-4677-1.svg" loading="lazy" alt="" class="ug-icon">
-                <div class="ug-role">Coach</div>
-                <div class="ug-point-5">Skyrocket credibility and trust</div>
-                <div class="ug-point-5">Land new leads and customers</div>
-                <div class="ug-point-5">Have conversation at scale using content</div>
-                <div class="ug-point-5">Skyrocket visibility and authority</div>
-                <div class="ug-thumb">
-                  <div>
-                    <div class="ug-person-name">Sadaf Tahir</div>
-                    <div class="ug-designation">Corporate Trainer</div>
-                  </div>
-                  <a href="#" class="w-inline-block w-lightbox"><img src="images/coach-owx67900a10whgd7aehiyho3hak3ok81hay73yatmc_1coach-owx67900a10whgd7aehiyho3hak3ok81hay73yatmc.webp" loading="lazy" alt="" class="ug-img">
-                    <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/497335156",
-      "originalUrl": "https://vimeo.com/497335156",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/1029219462_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F497335156%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F497335156&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1029219462_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="ug-slide-3 w-slide">
-              <div class="user-group-card"><img src="images/Group-4674-3.svg" loading="lazy" alt="" class="ug-icon">
-                <div class="ug-role">Sales Professional</div>
-                <div class="ug-point-5">Find top-shelf active prospects</div>
-                <div class="ug-point-5">Increased replies from prospects</div>
-                <div class="ug-point-5">Land content-driven leads</div>
-                <div class="ug-point-5">Skyrocket credibility and authority</div>
-                <div class="ug-thumb">
-                  <div>
-                    <div class="ug-person-name">Achyut Menon</div>
-                    <div class="ug-designation">MD, Options Executive</div>
-                  </div>
-                  <a href="#" class="w-inline-block w-lightbox"><img src="images/HR--owx7rdx0ftvdv2tpho1evbp4npv9dt2xv5k4wv2e0k_1HR--owx7rdx0ftvdv2tpho1evbp4npv9dt2xv5k4wv2e0k.png" loading="lazy" alt="" class="ug-img">
-                    <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/469309239",
-      "originalUrl": "https://vimeo.com/469309239",
-      "width": 940,
-      "height": 940,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/977079305_640.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F469309239%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F469309239&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F977079305_640.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"940\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slider-arrow w-slider-arrow-left">
-            <div class="icon-4 w-icon-slider-left"></div>
-          </div>
-          <div class="slider-arrow w-slider-arrow-right">
-            <div class="icon-4 w-icon-slider-right"></div>
-          </div>
-          <div class="hide dot-sec w-slider-nav w-shadow w-round"></div>
-        </div>
-      </div>
-    </div>
-    <div class="section-10 hide">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2">How does <span class="green-gradient-span">The LinkedIn 2 Day Transformative Workshop work?</span><br></h2>
-        <h3 class="section-subheading">The LinkedIn workshop is specifically designed for busy people, even full-time job holders</h3>
-        <div class="workshop-process-grid">
-          <div class="process-card-2"><img src="images/Recorded_Icon-1.svg" loading="lazy" id="w-node-_65dbc27d-39ab-485e-487b-df3438a855a2-fb037078" alt="" class="process-img-2">
-            <div class="process-heading">Recorded Video</div>
-            <div id="w-node-_65dbc27d-39ab-485e-487b-df3438a855a5-fb037078" class="text-block-29"><strong>1 video</strong> per day to watch and perform the task at your convenience<br></div>
-          </div><img src="images/right-arrow-1.svg" loading="lazy" alt="" class="process-arrow">
-          <div class="process-card-2"><img src="images/Live_Session_Icon-1.svg" loading="lazy" alt="" class="process-img-2">
-            <div class="process-heading">Live Sessions</div>
-            <div id="w-node-_65dbc27d-39ab-485e-487b-df3438a855af-fb037078" class="text-block-29">2 Doubt-clearing LIVE session in the week <strong>9-10pm IST</strong> ( Recording to be provided if missed )<br></div>
-          </div><img src="images/right-arrow-1.svg" loading="lazy" alt="" class="process-arrow">
-          <div class="process-card-2"><img src="images/Mega_Webinar_Icon-1.svg" loading="lazy" alt="" class="process-img-2">
-            <div class="process-heading">Mega Webinar</div>
-            <div id="w-node-_65dbc27d-39ab-485e-487b-df3438a855ba-fb037078" class="text-block-29">4 hour long <strong>LIVE ONLY</strong> mega webinar to unveil bonuses on Sunday <strong>11am-3pm IST ( No Recordings )</strong><br></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-8">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2 green-gradient-span">What You Will Learn Over 5 Value Packed Days<br></h2>
-        <div class="learn-grid-2">
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2">The Powerful Client Snipper Method</div><img src="images/Group-4677-2.svg" loading="lazy" alt="" class="pack-img-2">
-            <div id="w-node-e1d3d795-e080-18d2-c1af-a6d5adf9a4f8-fb037078">
-              <div class="ug-point-5 learn-point">Will help you find your exact potential clients on LinkedIn without spending a dollar in ads (unlike Facebook )</div>
-              <div class="ug-point-5 learn-point bomb-icon">Led to 1786 leads for my brand in just last 45 days</div>
-            </div>
-          </div>
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2"><strong>The 100M Content Formula</strong></div><img src="images/Group-4674-2-1.svg" loading="lazy" alt="" class="pack-img-2">
-            <div id="w-node-e1d3d795-e080-18d2-c1af-a6d5adf9a502-fb037078">
-              <div class="ug-point-5 learn-point">Step by step LinkedIn content writing syntax to drive 4X engagement</div>
-              <div class="ug-point-5 learn-point bomb-icon">Generated 100M+ views on my content &amp; 20M+ on my students’ content.</div>
-            </div>
-          </div>
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2">Acceptance rate sky rocket formula</div><img src="images/Group-4677-4.svg" loading="lazy" alt="" class="pack-img-2">
-            <div>
-              <div class="ug-point-5 learn-point">Strategy to get accepted by top CXO&#x27;s on LinkedIn</div>
-              <div class="ug-point-5 learn-point bomb-icon">76% increase in acceptance rate on average</div>
-            </div>
-          </div>
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2">LinkedIn Profile Funnel Optimisation</div><img src="images/Connection-Hacking.svg" loading="lazy" alt="" class="pack-img-2">
-            <div id="w-node-e1d3d795-e080-18d2-c1af-a6d5adf9a514-fb037078">
-              <div class="ug-point-5 learn-point">Will help you rank your profile on the LinkedIn search and generate you inbound leads like clockwork</div>
-              <div class="ug-point-5 learn-point bomb-icon">Generates my profile 7,800+ search appearance every week leading to a ton of inbound leads</div>
-            </div>
-          </div>
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2">The 7-Touchpoint Outbound System</div><img src="images/Group-4677-3.svg" loading="lazy" alt="" class="pack-img-2">
-            <div id="w-node-e1d3d795-e080-18d2-c1af-a6d5adf9a51d-fb037078">
-              <div class="ug-point-5 learn-point">Nurture connections by engaging with them before you send them your first message, resulting in skyrocketed conversions</div>
-              <div class="ug-point-5 learn-point bomb-icon">Generated my client $35,000 in sales in a month of applying this</div>
-            </div>
-          </div>
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2">Step by step content guidelines<br></div><img src="images/Group-4674-2-2.svg" loading="lazy" alt="" class="pack-img-2">
-            <div>
-              <div class="ug-point-5 learn-point">The exact blueprint to create and post content on LinkedIn from starters to pro</div>
-              <div class="ug-point-5 learn-point bomb-icon">Lead to 240,000+ page views on my website just via LinkedIn</div>
-            </div>
-          </div>
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2"><strong>Million-Dollar Lead Generation Process</strong><br></div><img src="images/Group-4677-5.svg" loading="lazy" alt="" class="pack-img-2">
-            <div id="w-node-e1d3d795-e080-18d2-c1af-a6d5adf9a532-fb037078">
-              <div class="ug-point-5 learn-point">Helps you search and connect with open-wallet leads and unlocks thousands of leads that are keen to work with you<br></div>
-              <div class="ug-point-5 learn-point bomb-icon">Generated over 2,00,00,000 in revenue for me and my clients using the above process.</div>
-            </div>
-          </div>
-          <div class="learn-card-2">
-            <div class="learn-card-heading-2"><strong>Reverse engineering TG OPN technique</strong><br></div><img src="images/LinkedIn-Profile_Icon.svg" loading="lazy" alt="" class="pack-img-2">
-            <div id="w-node-e1d3d795-e080-18d2-c1af-a6d5adf9a53e-fb037078">
-              <div class="ug-point-5 learn-point">Steal your competitors’ leads and customers using growth hacking.</div>
-              <div class="ug-point-5 learn-point bomb-icon">Generated my client 40M in revenue using this technique.</div>
-            </div>
-          </div>
-        </div>
-        <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
-          <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span> <span class="strike-span hide-this">Rs 1999</span></div>
-          <div class="cta-text-small-4">Starts July 26, Monday at comfort of your home</div>
-        </a>
-      </div>
-    </div>
-    <div class="section-8 gray-bg">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2">Register before midnight of<br><span class="register-on cur-date">Jan 7th, 2024</span><br></h2>
-        <h3 class="section-subheading unlock-text">To Unlock the bonuses worth Rs 45,000/-</h3>
-        <div class="bonus-grid">
-          <div class="bonus-card">
-            <div class="bonus-img-bg"><img src="images/Group-330.svg" loading="lazy" alt="" class="bonus-img">
-              <div class="text-block-31">Bonus 1</div>
-            </div>
-            <div class="bonus-card-content-container">
-              <div class="bonus-content">Outreach scripts and cover image templates to dominate LinkedIn</div>
-              <div class="value-heading">Swipe Files</div>
-              <div class="value-text">Value Rs 5,000/-</div>
-            </div>
-          </div>
-          <div class="bonus-card">
-            <div class="bonus-img-bg"><img src="images/Icon-awesome-linkedin.svg" loading="lazy" alt="" class="bonus-img">
-              <div class="text-block-31">Bonus 2</div>
-            </div>
-            <div class="bonus-card-content-container">
-              <div class="bonus-content">The secret to beat your LinkedIn search competition in less than 30 minutes<br></div>
-              <div class="value-heading">Mega Webinar</div>
-              <div class="value-text">Value Rs 10,000/-</div>
-            </div>
-          </div>
-          <div class="bonus-card">
-            <div class="bonus-img-bg"><img src="images/hourglass-1.svg" loading="lazy" alt="" class="bonus-img">
-              <div class="text-block-31">Bonus 3</div>
-            </div>
-            <div class="bonus-card-content-container">
-              <div class="bonus-content">Ultimate hack to get anyone’s LinkedIn email and send automated email sequences</div>
-              <div class="value-heading">Mega Webinar</div>
-              <div class="value-text">Value Rs 10,000/-</div>
-            </div>
-          </div>
-          <div class="bonus-card">
-            <div class="bonus-img-bg"><img src="images/email.svg" loading="lazy" alt="" class="bonus-img">
-              <div class="text-block-31">Bonus 4</div>
-            </div>
-            <div class="bonus-card-content-container">
-              <div class="bonus-content">Secret to get Rs 2500 LinkedIn ad coupons for free<br></div>
-              <div class="value-heading">Mega Webinar</div>
-              <div class="value-text">Value Rs 5,000/-</div>
-            </div>
-          </div>
-          <div class="bonus-card">
-            <div class="bonus-img-bg"><img src="images/unlock.svg" loading="lazy" alt="" class="bonus-img">
-              <div class="text-block-31">Bonus 5</div>
-            </div>
-            <div class="bonus-card-content-container">
-              <div class="bonus-content">Growth hack to generate emails from LinkedIn content<br></div>
-              <div class="value-heading">Mega Webinar</div>
-              <div class="value-text">Value Rs 10,000/-</div>
-            </div>
-          </div>
-          <div class="bonus-card">
-            <div class="bonus-img-bg"><img src="images/dollar-symbol.svg" loading="lazy" alt="" class="bonus-img">
-              <div class="text-block-31">Bonus 6</div>
-            </div>
-            <div class="bonus-card-content-container">
-              <div class="bonus-content">My top 5 brand-building LinkedIn tools and how to use them<br></div>
-              <div class="value-heading">Swipe files</div>
-              <div class="value-text">Value Rs 5,000/-</div>
-            </div>
-          </div>
-        </div>
-        <h2 class="section-heading-2">Time Is Running Out. Grab Your Spot Fast!<br></h2>
-        <div class="time-flex-2">
-          <div class="time-block-2">
-            <div id="day-number" class="text-block-30">00</div>
-            <div class="time-unit-2">Days</div>
-          </div>
-          <div class="time-block-2">
-            <div id="hour-number" class="text-block-30">00</div>
-            <div class="time-unit-2">Hrs</div>
-          </div>
-          <div class="time-block-2">
-            <div id="minute-number" class="text-block-30">00</div>
-            <div class="time-unit-2">Mins</div>
-          </div>
-          <div class="time-block-2">
-            <div id="second-number" class="text-block-30">00</div>
-            <div class="time-unit-2">Secs</div>
-          </div>
-        </div>
-        <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
-          <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span> <span class="strike-span hide-this">Rs 1999</span></div>
-          <div class="cta-text-small-4">Starts July 26, Monday at comfort of your home</div>
-        </a>
-      </div>
-    </div>
-    <div class="section-8">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2 green-gradient-span">You are not the first to attend the LinkedIn Workshop<br></h2>
-        <div class="text-block-117"><span class="green-text-span-3">40,000+ people</span> people from top global brands and startups have taken the workshop and transformed their LinkedIn game 😁<br></div>
-        <div class="brands-flex"><img src="images/google-1.svg" loading="lazy" alt=""><img src="images/kisspng-paypal-logo-huichol-5b36c55552e359.3246717415303161173395-1024x271-1-1.svg" loading="lazy" alt=""><img src="images/uber-1.svg" loading="lazy" alt=""><img src="images/airbnb.svg" loading="lazy" alt=""><img src="images/300px-Citibank-1.svg-1.svg" loading="lazy" alt=""><img src="images/amazon.svg" loading="lazy" alt=""><img src="images/oyo-1-1.svg" loading="lazy" alt=""><img src="images/tedx-1-1.svg" loading="lazy" alt=""></div>
-        <div>
-          <div class="testimonial-grid bm-32">
-            <div class="tesimonial-video-block">
-              <div style="padding-top:100%" class="w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700660%3Fh%3D76585e1ed8%26app_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F703700660%2F76585e1ed8&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341536-79f6bac7ce17549e7677ed85488525d4dfbbe21dc1af168c29e81743d6808553-d_640&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo" scrolling="no" allowfullscreen="" title="Aaradhya-14"></iframe></div>
-            </div>
-            <div class="tesimonial-video-block">
-              <div style="padding-top:100%" class="w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700604%3Fh%3Dfb12c8fa05%26app_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F703700604%2Ffb12c8fa05&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341131-7c7c17500d6eaa5d197592cff6b5633e230bf1a7e984e733b522fb8aeeb1ca2c-d_640&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo" scrolling="no" allowfullscreen="" title="Yash-22"></iframe></div>
-            </div>
-            <div class="tesimonial-video-block">
-              <div style="padding-top:100%" class="w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700534%3Fh%3Dc98555dbe8%26app_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F703700534%2Fc98555dbe8&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341123-cce2c99a0b0aeab17843e3ff4d7e5aeeea222b3ee251aa5af89fc02aa2756f47-d_640&key=c4e54deccf4d4ec997a64902e9a30300&type=text%2Fhtml&schema=vimeo" scrolling="no" allowfullscreen="" title="Vishal-21"></iframe></div>
-            </div>
-          </div>
-          <div data-delay="2000" data-animation="slide" class="slider-4 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-            <div class="mask-6 w-slider-mask">
-              <div class="slide-11 w-slide"><img src="images/2-LinkedIn-6-28-2020-12-35-04-AM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/2-LinkedIn-6-28-2020-12-36-50-AM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/2-LinkedIn-6-28-2020-12-47-41-AM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/2-LinkedIn-6-28-2020-12-48-16-AM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/2-LinkedIn-7-1-2020-7-38-09-PM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/LinkedIn-6-28-2020-1-33-23-AM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/2-LinkedIn-7-1-2020-7-39-44-PM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/LinkedIn-6-28-2020-1-36-31-AM.png" loading="lazy" alt=""></div>
-              <div class="slide-11 w-slide"><img src="images/LinkedIn-6-28-2020-1-53-57-AM.png" loading="lazy" alt=""></div>
-            </div>
-            <div class="slider-arrow w-slider-arrow-left">
-              <div class="icon-4 w-icon-slider-left"></div>
-            </div>
-            <div class="slider-arrow w-slider-arrow-right">
-              <div class="icon-4 w-icon-slider-right"></div>
-            </div>
-            <div class="hide w-slider-nav w-round"></div>
-          </div>
-          <div></div>
-          <div class="collection-list-wrapper w-dyn-list">
-            <div fs-cmsload-element="list" role="list" class="w-dyn-items w-row">
-              <div role="listitem" class="collection-item test-block w-dyn-item w-col w-col-4">
-                <div class="w-dyn-bind-empty w-video w-embed"></div>
-              </div>
-            </div>
-            <div class="w-dyn-empty">
-              <div>No items found.</div>
-            </div>
-            <div role="navigation" aria-label="List" class="w-pagination-wrapper">
-              <a href="#" aria-label="Previous Page" class="w-pagination-previous"><svg class="w-pagination-previous-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" transform="translate(0, 1)">
-                  <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
-                </svg>
-                <div class="w-inline-block">Previous</div>
-              </a>
-              <a href="#" aria-label="Next Page" class="w-pagination-next load-more-btn">
-                <div class="w-inline-block">Load More</div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-6"></div>
-      </div>
-    </div>
-    <div class="section-8 blue-bg">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2 green-gradient-span">Meet Your Mentor<br></h2>
-        <form action="/search" class="search w-form"><input class="search-box w-input" maxlength="256" name="query" placeholder="Vaibhav Sisinty" type="search" id="search" required=""><input type="submit" class="search-button w-button" value="Search">
-          <div class="div-block-167"></div>
-        </form>
-        <div class="meet-mentori-flex2"><img src="images/Working-1.webp" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a894817-fb037078" sizes="(max-width: 479px) 100vw, (max-width: 767px) 45vw, (max-width: 991px) 22vw, (max-width: 1279px) 5vw, (max-width: 1439px) 48.0078125px, (max-width: 1919px) 3vw, 48.0078125px" alt="" srcset="images/Working-1-p-500.webp 500w, images/Working-1-p-800.webp 800w, images/Working-1-p-1080.webp 1080w, images/Working-1-p-1600.webp 1600w, images/Working-1-p-2000.webp 2000w, images/Working-1-p-2600.webp 2600w, images/Working-1-p-3200.webp 3200w, images/Working-1.webp 5776w" class="image-96">
-          <div class="meet-mentori-cred-block-2">
-            <div class="mentor-cred-hidden-2"><span class="counter">150</span><span>M</span><span class="green-text-span-3">+</span></div>
-            <div class="text-block-34 text-small">impressions</div><img src="images/Linkedin_Mobile.svg" loading="lazy" alt="" class="image-95">
-          </div>
-          <div class="meet-mentori-cred-block-2">
-            <div class="mentor-cred-hidden-2"><span class="counter">300</span>K<span class="green-text-span-3">+</span></div>
-            <div class="text-block-34 text-small">followers</div><img src="images/Linkedin_Mobile.svg" loading="lazy" alt="" class="image-95">
-          </div>
-          <div class="meet-mentori-cred-block-2">
-            <div class="mentor-cred-hidden-2"><span class="counter">86</span>K<span class="green-text-span-3">+</span></div>
-            <div class="text-block-34 text-small">followers</div><img src="images/Icon-feather-instagram.svg" loading="lazy" alt="" class="image-95">
-          </div>
-          <div class="meet-mentori-cred-block-2">
-            <div class="mentor-cred-hidden-2"><span class="counter">22</span>K<span class="green-text-span-3">+</span></div>
-            <div class="text-block-34 text-small">followers</div><img src="images/Icon-awesome-twitter.svg" loading="lazy" alt="" class="image-95">
-          </div>
-        </div>
-        <div class="div-block-49">
-          <p>Hi, I am Vaibhav Sisinty, I turn startups into profitable businesses, growth consult for brands and help them use the internet to increase profitability and their overall bottom lines.<br></p>
-          <div class="div-block-165">
-            <p>In 2012 (at age 19) I moved from running Discovery Android to founding <span class="green-text-span-3">an award winning digital media company, CrazyHeads.</span> Within 3 years, CrazyHead helped 100+ clients over the world grow their businesses using internet. <br><br>After working at Uber (India and Latin America) for 4.5 years, I joined Klook to lead marketing for India and the Middle East where I scaled the business to over $27M in a year.<br></p><img src="images/Google-Event-1.webp" loading="lazy" id="w-node-_3218708f-26e4-e184-3e89-4cb45826c9c1-fb037078" sizes="100vw" alt="" srcset="images/Google-Event-1-p-500.webp 500w, images/Google-Event-1-p-800.webp 800w, images/Google-Event-1-p-1080.webp 1080w, images/Google-Event-1-p-1600.webp 1600w, images/Google-Event-1-p-2000.webp 2000w, images/Google-Event-1-p-2600.webp 2600w, images/Google-Event-1-p-3200.webp 3200w, images/Google-Event-1.webp 3554w">
-          </div>
-        </div>
-        <div data-delay="4000" data-animation="slide" class="slider-5 desktop w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-          <div class="mask-6 w-slider-mask">
-            <div class="w-slide">
-              <div class="div-block-163">
-                <div class="div-block-50">
-                  <div class="div-block-164"><img src="images/0-12_10-12.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a894859-fb037078" alt="" class="image-94">
-                    <div class="link-3">Tanmay Bhat</div>
-                    <div class="text-block-33">Co-founder, AIB</div>
-                  </div>
-                  <p class="paragraph-6">Vaibhav is legit. He is credible, succinct and to the point. Also, if you do something with him, you will get 500K followers 😉</p>
-                </div>
-                <div class="div-block-50">
-                  <div class="div-block-164"><img src="images/0-10-1_10-10-1.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a894862-fb037078" alt="" class="image-94">
-                    <div class="link-3">Santosh Panda</div>
-                    <div class="text-block-33">Co-founder, Explara</div>
-                  </div>
-                  <p class="paragraph-6">Always brings fresh news ideas, hacks, tricks and also a measurable way to implement marketing models/process to grow.</p>
-                </div>
-                <div class="div-block-50">
-                  <div class="div-block-164"><img src="images/0-14_10-14.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a89486b-fb037078" alt="" class="image-94">
-                    <div class="link-3">Jean Bonnenfant</div>
-                    <div class="text-block-33">Head of Growth, GrowthTribe</div>
-                  </div>
-                  <p class="paragraph-6">Vaibhav is killer. Awesome growth hacker and marketer. Super data driven and results oriented.</p>
-                </div>
-              </div>
-            </div>
-            <div class="w-slide">
-              <div class="div-block-163">
-                <div class="div-block-50">
-                  <div class="div-block-164"><img src="images/0-13_10-13.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a894876-fb037078" alt="" class="image-94">
-                    <div class="link-3">Udit Goenka</div>
-                    <div class="text-block-33">Founder, Pitchground</div>
-                  </div>
-                  <p>Vaibhav is a crazy retard when it comes to cracking Growth Codes. I wish he never shares his stuff with anyone else.</p>
-                </div>
-                <div class="div-block-50">
-                  <div class="div-block-164"><img src="images/0-9_10-9.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a89487f-fb037078" alt="" class="image-94">
-                    <div class="link-3">Juanma Varo</div>
-                    <div class="text-block-33">Marketing Director, Product School</div>
-                  </div>
-                  <p>Vaibhav always brings value to the community. I haven&#x27;t seen anything like his growth hacking course.</p>
-                </div>
-                <div class="div-block-50">
-                  <div class="div-block-164"><img src="images/0-11_10-11.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a894888-fb037078" alt="" class="image-94">
-                    <div class="link-3">Daniel Doan</div>
-                    <div class="text-block-33">Director of Copywriting, BAMF</div>
-                  </div>
-                  <p>Vaibhav is someone who truly understands how to get traction in the fastest way possible — he&#x27;s the real deal</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slider-arrow hide w-slider-arrow-left">
-            <div class="w-icon-slider-left"></div>
-          </div>
-          <div class="slider-arrow hide w-slider-arrow-right">
-            <div class="w-icon-slider-right"></div>
-          </div>
-          <div class="hide w-slider-nav w-round"></div>
-        </div>
-        <div data-delay="4000" data-animation="slide" class="slider-4 mobile w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-          <div class="mask-6 w-slider-mask">
-            <div class="slide-11 mentor-slide w-slide">
-              <div class="div-block-50">
-                <div class="div-block-164"><img src="images/0-12_10-12.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a894899-fb037078" alt="" class="image-94">
-                  <div class="link-3">Tanmay Bhat</div>
-                  <div class="text-block-33">Co-founder, AIB</div>
-                </div>
-                <p>Vaibhav is legit. He is credible, succinct and to the point. Also, if you do something with him, you will get 500K followers 😉</p>
-              </div>
-            </div>
-            <div class="slide-11 mentor-slide w-slide">
-              <div class="div-block-50">
-                <div class="div-block-164"><img src="images/0-10-1_10-10-1.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a8948a3-fb037078" alt="" class="image-94">
-                  <div class="link-3">Santosh Panda</div>
-                  <div class="text-block-33">Co-founder, Explara</div>
-                </div>
-                <p>Always brings fresh news ideas, hacks, tricks and also a measurable way to implement marketing models/process to grow.</p>
-              </div>
-            </div>
-            <div class="slide-11 mentor-slide w-slide">
-              <div class="div-block-50">
-                <div class="div-block-164"><img src="images/0-14_10-14.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a8948ad-fb037078" alt="" class="image-94">
-                  <div class="link-3">Jean Bonnenfant</div>
-                  <div class="text-block-33">Head of Growth, GrowthTribe</div>
-                </div>
-                <p>Vaibhav is killer. Awesome growth hacker and marketer. Super data driven and results oriented.</p>
-              </div>
-            </div>
-            <div class="slide-11 mentor-slide w-slide">
-              <div class="div-block-50">
-                <div class="div-block-164"><img src="images/0-13_10-13.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a8948b7-fb037078" alt="" class="image-94">
-                  <div class="link-3">Udit Goenka</div>
-                  <div class="text-block-33">Founder, Pitchground</div>
-                </div>
-                <p>Vaibhav is a crazy retard when it comes to cracking Growth Codes. I wish he never shares his stuff with anyone else.</p>
-              </div>
-            </div>
-            <div class="slide-11 mentor-slide w-slide">
-              <div class="div-block-50">
-                <div class="div-block-164"><img src="images/0-9_10-9.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a8948c1-fb037078" alt="" class="image-94">
-                  <div class="link-3">Juanma Varo</div>
-                  <div class="text-block-33">Marketing Director, Product School</div>
-                </div>
-                <p>Vaibhav always brings value to the community. I haven&#x27;t seen anything like his growth hacking course.</p>
-              </div>
-            </div>
-            <div class="slide-11 mentor-slide w-slide">
-              <div class="div-block-50">
-                <div class="div-block-164"><img src="images/0-11_10-11.jpg" loading="lazy" id="w-node-_72979ad7-8d4d-9a82-0747-82d13a8948cb-fb037078" alt="" class="image-94">
-                  <div class="link-3">Daniel Doan</div>
-                  <div class="text-block-33">Director of Copywriting, BAMF</div>
-                </div>
-                <p>Vaibhav is someone who truly understands how to get traction in the fastest way possible — he&#x27;s the real deal</p>
-              </div>
-            </div>
-          </div>
-          <div class="slider-arrow hide w-slider-arrow-left">
-            <div class="w-icon-slider-left"></div>
-          </div>
-          <div class="slider-arrow hide w-slider-arrow-right">
-            <div class="w-icon-slider-right"></div>
-          </div>
-          <div class="hide w-slider-nav w-round"></div>
-        </div>
-        <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
-          <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span> <span class="strike-span hide-this">Rs 1999</span></div>
-          <div class="cta-text-small-4">Starts July 26, Monday at comfort of your home</div>
-        </a>
-      </div>
-    </div>
-    <div class="section-8">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2">Frequently Asked Questions<br>(FAQ)<br></h2>
-        <div class="text-block-117">I’ve tried my best to answer all frequently asked questions. For further queries, please email me at: <a href="/cdn-cgi/l/email-protection#c7b4b2b7b7a8b5b387b4aeb4aea9b3bee9a4a8aa"><span class="__cf_email__" data-cfemail="b4dcddf4d3c6dbc3c0dcc7d7dcdbdbd89adddb">[email&#160;protected]</span></a>. My amazing support team will reply within 12 hours. 🙂<br></div>
-        <div class="accordion-wrapper-5">
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">When does the workshop start?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">The date and timings of the workshop has been mentioned on the top of the page.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Will this be live or pre-recorded?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">A mix of both. Every day (all 5 Days) you’ll get the Session pre-recorded Videos.<br>‍<br>2 days there’ll be interactive sessions. One taught by Vaibhav which will be a 2.5 hour long Mega Webinar where you&#x27;ll learn advanced linkedin growth hacks and tactics for which you won&#x27;t receive any recordings.<br><br>The other session will be taken live by his team which will be a QnA to answer and clarify all your doubts and queries at the end of the workshop.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">What are the timings?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">Like mentioned above. Every day you will get the recorded videos at 10PM and you can watch any time of the day.<br>‍<br>Live sessions would be at 7 PM IST.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">I have a full time job, not sure if I can make it. Will you be sharing recordings?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">Yes! You’ll receive recordings of 5 day classes. Please note, there would be no recording of the live sessions.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Is this workshop an advanced linkedin growth hacking program?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">It’s not a super advanced workshop. It’s for people getting started and streamlining their LinkedIn efforts. You won’t be taught any crazy growth hacking or advanced automation.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Would there be any certificate on completion?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">Yes! You will receive a certificate on completion.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Will I be able to make a lot of money after this workshop?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">No program ‘guarantees’ any income, including this. The workshop is designed to get your LinkedIn efforts streamlined and help you get started with generating leads, building a personal brand, or get good job opportunities.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Do you have an affiliate program?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">Yes! we do, but its only open for participants of the workshop.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">I made the payment but didn’t receive any email.</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">Please write to: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4028290027322f3734283323282f2f2c6e292f">[email&#160;protected]</a> and our awesome support team will get back to you within 12 hours.<br><br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">When can I receive the bonus?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">You will get access to all the bonuses during live sessions.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Will I get a recording of all the sessions?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">The sessions are time gated for consumption and are the essence of the GrowthSchool Experience. Hence we won’t be providing recordings for the sessions. The idea is to remove procrastination completely and make you take action and completely watch the session &amp; make the most out of it.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Why is the price of the program so less?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">We built this GrowthSchool Experience to make it accessible to hundreds and thousands of people at scale.To make that happen we had to solve this one big problem: <strong>Mentor’s availability and time.<br><br>‍</strong>Your mentors quite literally are in the top 1% of their industry which means their time is expensive as well as inadequate. The cost of running the programs instantly goes up if they keep teaching the same thing again and again.<br><br>That’s exactly why the GrowthSchool Experience is a perfect blend of both worlds. You get to learn from your favourite mentor with like-minded people in a stream at a lost of less than a pizza :)<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Is this a live session?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">No, it’s better! :)<br><br>Here’s why :<br>This is an interactive GrowthSchool experience in which you will be learning practical concepts taught by your mentor. You will be attending this stream with like-minded doers like you, while participating in polls, answering thought-provoking questions, attempting quizzes, and doing many more exciting activities.By the end of the value-packed session, you will have a roadmap to reach your desired outcomes.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Can I record the session for personal use later?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">The content is owned by GrowthSchool. It is not allowed to record and use it for personal use. Doing so will lead to legal repercussions.<br>But here’s what you should do 😛<br>Our best learners usually take notes or create mind maps and share them with the community. So, if you want to revisit your learnings or see what was in the content of the session, just take notes and revisit them in the future.<br>Not only does it increase learning output also makes the overall learning experience much much better. Don’t believe it? Just try it :)<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Why can&#x27;t I watch it anytime I want?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">Ask yourselves this simple question: How many online courses have you taken up to date? Out of them, how many did you actually complete?<br><br>Based on all our learnings and surveys in our community, the completion rate lies between 2-3%<br><br>Over multiple experiments and ideation, we figured out that giving people access to content is not enough. Making people consume and finish the session is the most important thing.It is of no use if you just register for sessions and never watch them. But with our tech, we are providing a rich interaction-led experience with polls, quizzes, and chats which have helped us increase completion rates of learners go from 2-3% to hit 90%<br><br>We believe in our community of doers, that’s what we take pride in.Hence, you can’t watch it anytime you want. You have to make up time, commit and complete it within that timeframe to reach your desired outcomes :)<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">Can I ask my questions to the mentor in the session?</h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">There will be a dedicated session only for QnAs with your mentors where you can ask all your doubts/questions to the mentor in real-time and interact with him/her.<br></p>
-            </div>
-          </div>
-          <div class="accordion-item-2">
-            <div class="accordion-item-trigger-2">
-              <h4 class="accordion-heading-2">If I miss this can I join the next one? </h4>
-              <div class="plus-icon-2 w-icon-slider-right"></div>
-            </div>
-            <div class="accordion-item-content">
-              <p class="faq-answer-2">Yes, of course, you can! But you’ll have to register and pay for it again when it is scheduled to happen next. That’s exactly why we mention the date and time of the sessions clearly on the landing page and also send multiple reminders on WhatsApp and email so that you don’t miss out on joining the session.<br></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-8">
-      <div class="site-wrapper">
-        <h2 class="section-heading-2 green-gradient-span dark-gradient">Still Not Convinced?<br></h2>
-        <div class="text-block-117 lm-40">Go to google and type my name, “Vaibhav Sisinty”<br>‍<br>Go to my Facebook page or Trustpilot and check my reviews<br>‍<br>Go to my LinkedIn and check my endorsements and recommendations<br>‍<br>Go to my Instagram and check my highlights<br><br>I’m sure you’ll have no problem getting value from me. 🙂<br></div>
-        <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
-          <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span> <span class="strike-span hide-this">Rs </span><span class="source-price strike-span hide-this">499</span></div>
-          <div class="cta-text-small-4">Starts July 26, Monday at comfort of your home</div>
-        </a>
-        <div class="text-block-117 top-40">PS : This is the last call to action. See you again in the retargeting ads 😅<br></div>
-      </div>
-    </div>
-    <div class="div-block-376">
-      <div class="gs-banner">
-        <a href="https://growthschool.io" class="link-block-14 w-inline-block">
-          <div class="div-block-370">
-            <div class="html-embed-54 w-embed"><svg width="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.25 6.75L4.75 12L10.25 17.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M19.25 12H5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg></div>
-            <div class="text-block-224">Go back to</div><img src="images/GS-Logo-Full-5.svg" loading="lazy" alt="" class="image-218">
-          </div>
-        </a>
-      </div>
-      <div class="html-embed-56 w-embed w-script">
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer="">
-const urlParams = new URLSearchParams(window.location.search);
-let referral = urlParams.get('ref');
-if (referral == 'gs') {
-    document.getElementsByClassName('gs-banner')[0].setAttribute('style', 'display: block;');
-} 
-</script>
-      </div>
-    </div>
-  </div>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const swiper = new Swiper('.swiper', {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: 1, // Default for smallest screens
+              coverflowEffect: {
+                  rotate: 50,             // Slide rotation in degrees
+                  stretch: 0,             // Stretch space between slides (in px)
+                  depth: 100,            // Depth offset in px (slides translate in Z axis)
+                  modifier: 1,            // Effect multiplier
+                  slideShadows: true,    // Enables slides shadows
+              },
+              pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+              },
+
+              // Autoplay configuration
+              autoplay: {
+                  delay: 3000,           // 3 seconds delay between slides
+                  disableOnInteraction: false,  // Continue autoplay after user interaction
+              },
+              loop: true,  // Enable infinite loop
+              // Responsive breakpoints - fixed to avoid conflicts
+              breakpoints: {
+                  // when window width is < 480px (default above is 1 slide)
+                  
+                  // when window width is >= 480px and < 992px
+                  480: {
+                      slidesPerView: 2,
+                  },
+                  // when window width is >= 992px
+                  992: {
+                      slidesPerView: 3,
+                  }
+              }
+          });
+      });
+  </script>
+</body>
+</html>

@@ -3266,7 +3266,7 @@
     }
   
     .pub-section.hero {
-      background-image: linear-gradient(#000000a3, #000000a3), url('../images/hero-img.png');
+      background-image: (#000000a3, #000000a3), url('../images/hero-img.png');
       background-position: 0 0, 0 90%;
       background-repeat: repeat, no-repeat;
       background-size: auto, auto;
