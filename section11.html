@@ -1,31 +1,389 @@
-<div id="section11" class="section-8 gray-bg">
-  <div class="site-wrapper">
-    <h2 class="section-heading-2">Register before midnight of<br><span class="register-on cur-date">Jan 7th, 2024</span><br></h2>
-    <h3 class="section-subheading unlock-text">To Unlock the bonuses worth Rs 45,000/-</h3>
-    <iframe src="/components/cardswiper.html" width="100%" height="auto" style="overflow: hidden; min-height: 900px;" frameborder="0"></iframe>
 
-    <h2 class="section-heading-2">Time Is Running Out. Grab Your Spot Fast!<br></h2>
-    <div class="time-flex-2">
-      <div class="time-block-2">
-        <div id="day-number" class="text-block-30">00</div>
-        <div class="time-unit-2">Days</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cardSwiper</title>
+  <!-- <link rel="stylesheet" href="css/growthschool.webflow.css"> -->
+  <link rel="stylesheet" href="css/webflow.css">
+  <style>
+    /* Card swiper styles */
+    .bonus-grid {
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-columns: 1fr;
+      margin-top: 60px;
+      margin-bottom: 80px;
+      display: grid;
+    }
+  
+    /* Mobile - 1 card per row */
+    @media screen and (max-width: 479px) {
+      .bonus-grid {
+        grid-template-columns: 1fr; /* One card per row */
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+      
+      .bonus-card {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  
+    /* Tablet - 2 cards per row */
+    @media screen and (min-width: 480px) and (max-width: 1049px) {
+      .bonus-grid {
+        grid-template-columns: 1fr 1fr; /* Two cards per row */
+      }
+    }
+  
+    /* Desktop - 3 cards per row (default) */
+    @media screen and (min-width: 1050px) {
+      .bonus-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Three cards per row */
+      }
+    }
+  
+    .container {
+      position: relative;
+      width: 100%;
+    }
+  
+    .bonus-card {
+      background-image: linear-gradient(320deg, #4562f34d, #fff);
+      border-radius: 15px;
+      overflow: hidden;
+      height: 350px;
+      position: relative;
+    }
+    
+    .bonus-img-bg {
+      background: linear-gradient(119deg, #012e46, #151b1e);
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      display: flex;
+      position: relative;
+    }
+    
+    .text-block-31 {
+      color: #fafafa;
+      font-family: DM Sans, sans-serif;
+      font-size: 14px;
+      position: absolute;
+      inset: 14px auto auto 16px;
+    }
+  
+    .overlay {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(31, 192, 171, 0.95);
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: height 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      z-index: 10;
+    }
+  
+    #section11 .bonus-card:hover .overlay {
+      height: 100%;
+      opacity: 1;
+    }
+  
+    .text {
+      color: #ffe18d;
+      font-size: 20px;
+      font-family: "DM Sans", sans-serif;
+      font-weight: 600;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+      max-width: 300px;
+      line-height: 1.4;
+    }
+    
+    .bonus-content {
+      margin-bottom: 36px;
+      font-family: DM Sans, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+  
+    .value-heading {
+      color: #393636;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    .value-text {
+      color: #2282dc;
+      font-size: 17px;
+      font-weight: 500;
+      text-decoration: line-through;
+    }
+  
+    /* Main page styles */
+  
+    .gray-bg {
+      background-color: #f5f5f5;
+    }
+  
+    .site-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .section-heading-2 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  
+    .section-subheading {
+      font-family: "DM Sans", sans-serif;
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+  
+    .unlock-text {
+      color: #2282dc;
+    }
+  
+    .time-flex-2 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+  
+    .time-block-2 {
+      background-color: #012e46;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      min-width: 80px;
+    }
+  
+    .text-block-30 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+  
+    .time-unit-2 {
+      font-size: 14px;
+    }
+  
+    .strike-span {
+      text-decoration: line-through;
+      margin-left: 10px;
+      font-size: 18px;
+    }
+  
+    /* Responsive iframe container */
+    .iframe-container {
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    @media screen and (max-width: 479px) {
+      .section-heading-2 {
+        font-size: 24px;
+      }
+      
+      .section-subheading {
+        font-size: 18px;
+      }
+      
+      .time-flex-2 {
+        flex-wrap: wrap;
+      }
+      
+      .time-block-2 {
+        min-width: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="section11" class="section-8 gray-bg">
+    <div class="site-wrapper">
+      <h2 class="section-heading-2">
+        Register before midnight of<br />
+        <span class="register-on cur-date">March 20, 2025</span><br />
+      </h2>
+      <h3 class="section-subheading unlock-text">
+        To Unlock the bonuses worth Rs 45,000/-
+      </h3>
+
+      <!-- Directly embed the card swiper content -->
+      <div class="iframe-container" id="cardSwiper">
+        <div class="bonus-grid">
+          <div class="bonus-card">
+            <div class="bonus-img-bg">
+              <img src="/images/scripts.svg" loading="lazy" alt="">
+              <div class="text-block-31">Bonus 1</div>
+            </div>
+            <div class="overlay">
+              <div class="text">
+                <div class="bonus-content">Outreach scripts and cover image templates to dominate LinkedIn</div>
+                <div class="value-heading">Swipe Files</div>
+                <div class="value-text">Value Rs 5,000/-</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <div class="bonus-img-bg">
+              <img src="/images/linkedin.svg" loading="lazy" alt="">
+              <div class="text-block-31">Bonus 2</div>
+            </div>
+            <div class="overlay">
+              <div class="text">
+                <div class="bonus-content">The secret to beat your LinkedIn search competition in less than 30 minutes<br></div>
+                <div class="value-heading">Mega Webinar</div>
+                <div class="value-text">Value Rs 10,000/-</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bonus-card">
+            <div class="bonus-img-bg">
+              <img src="/images/hourglass.svg" loading="lazy" alt="">
+              <div class="text-block-31">Bonus 3</div>
+            </div>
+            <div class="overlay">
+              <div class="text">
+                <div class="bonus-content">Ultimate hack to get anyone's LinkedIn email and send automated email sequences</div>
+                <div class="value-heading">Mega Webinar</div>
+                <div class="value-text">Value Rs 10,000/-</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <div class="bonus-img-bg">
+              <img src="/images/email.svg" loading="lazy" alt="" class="bonus-img">
+              <div class="text-block-31">Bonus 4</div>
+            </div>
+            <div class="overlay">
+              <div class="text">
+                <div class="bonus-content">Secret to get Rs 2500 LinkedIn ad coupons for free<br></div>
+                <div class="value-heading">Mega Webinar</div>
+                <div class="value-text">Value Rs 5,000/-</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <div class="bonus-img-bg">
+              <img src="/images/unlock.svg" loading="lazy" alt="" class="bonus-img">
+              <div class="text-block-31">Bonus 5</div>
+            </div>
+            <div class="overlay">
+              <div class="text">
+                <div class="bonus-content">Growth hack to generate emails from LinkedIn content<br></div>
+                <div class="value-heading">Mega Webinar</div>
+                <div class="value-text">Value Rs 10,000/-</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <div class="bonus-img-bg">
+              <img src="/images/dollar-symbol.svg" loading="lazy" alt="" class="bonus-img">
+              <div class="text-block-31">Bonus 6</div>
+            </div>
+            <div class="overlay">
+              <div class="text">
+                <div class="bonus-content">My top 5 brand-building LinkedIn tools and how to use them<br></div>
+                <div class="value-heading">Swipe files</div>
+                <div class="value-text">Value Rs 5,000/-</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="time-block-2">
-        <div id="hour-number" class="text-block-30">00</div>
-        <div class="time-unit-2">Hrs</div>
+
+      <h2 class="section-heading-2">
+        Time Is Running Out. Grab Your Spot Fast!<br />
+      </h2>
+      <div class="time-flex-2">
+        <div class="time-block-2">
+          <div id="day-number" class="text-block-30">00</div>
+          <div class="time-unit-2">Days</div>
+        </div>
+        <div class="time-block-2">
+          <div id="hour-number" class="text-block-30">00</div>
+          <div class="time-unit-2">Hrs</div>
+        </div>
+        <div class="time-block-2">
+          <div id="minute-number" class="text-block-30">00</div>
+          <div class="time-unit-2">Mins</div>
+        </div>
+        <div class="time-block-2">
+          <div id="second-number" class="text-block-30">00</div>
+          <div class="time-unit-2">Secs</div>
+        </div>
       </div>
-      <div class="time-block-2">
-        <div id="minute-number" class="text-block-30">00</div>
-        <div class="time-unit-2">Mins</div>
-      </div>
-      <div class="time-block-2">
-        <div id="second-number" class="text-block-30">00</div>
-        <div class="time-unit-2">Secs</div>
-      </div>
+      <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
+        <div>
+          Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span>
+          <span class="strike-span hide-this">Rs 1999</span>
+        </div>
+        <div class="cta-text-small-4">
+          Starts July 26, Monday at comfort of your home
+        </div>
+      </a>
     </div>
-    <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
-      <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span> <span class="strike-span hide-this">Rs 1999</span></div>
-      <div class="cta-text-small-4">Starts July 26, Monday at comfort of your home</div>
-    </a>
   </div>
-</div>
+
+  <script>
+    // Function to update countdown timer
+    function updateCountdown() {
+      const now = new Date();
+      const midnight = new Date();
+      midnight.setHours(23, 59, 59, 999);
+      
+      const diff = midnight - now;
+      
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      document.getElementById('day-number').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hour-number').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minute-number').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('second-number').textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
+
+
+ 

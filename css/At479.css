@@ -1231,21 +1231,21 @@
       display: none;
     }
   
-    .accordion-item-trigger-2 {
+    /* .accordion-item-trigger-2 {
       cursor: default;
       padding-left: 16px;
       padding-right: 16px;
     }
-  
-    .accordion-heading-2 {
+   */
+    /* .accordion-heading-2 {
       margin-right: 8px;
       font-size: 16px;
     }
-  
-    .faq-answer-2 {
+   */
+    /* .faq-answer-2 {
       padding-left: 16px;
       font-size: 16px;
-    }
+    } */
   
     .accordion-wrapper-2 {
       margin-top: 16px;

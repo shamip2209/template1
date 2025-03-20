@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion FAQ Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .faq-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .faq-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .faq-container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 25px;
+      background-color: #fff;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 18px;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background-color: #f9f9f9;
+    }
+
+    .faq-question.active {
+      background-color: #f5f7ff;
+      color: #4562f3;
+      font-weight: 600;
+    }
+
+    .question-text {
+      flex: 1;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .icon::before,
+    .icon::after {
+      content: '';
+      position: absolute;
+      background-color: #666;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question.active .icon::before,
+    .faq-question.active .icon::after {
+      background-color: #4562f3;
+    }
+
+    .icon::before {
+      width: 16px;
+      height: 2px;
+    }
+
+    .icon::after {
+      width: 2px;
+      height: 16px;
+      transform: rotate(0deg);
+    }
+
+    .faq-question.active .icon::after {
+      transform: rotate(90deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      padding: 0 25px;
+      color: #666;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .faq-answer.active {
+      max-height: 300px;
+      padding: 0 25px 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .faq-question {
+        padding: 16px 20px;
+        font-size: 16px;
+      }
+
+      .faq-answer.active {
+        padding: 0 20px 16px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <div class="question-text">How long is the LinkedIn workshop?</div>
+          <div class="icon"></div>
+        </div>
+        <div class="faq-answer">
+          The LinkedIn workshop is a 5-day program designed to give you comprehensive training at your own pace. Each day covers different aspects of LinkedIn mastery, with sessions lasting approximately 60-90 minutes. You'll have lifetime access to all workshop materials so you can revisit them anytime.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <div class="question-text">Will I receive the bonuses immediately after registration?</div>
+          <div class="icon"></div>
+        </div>
+        <div class="faq-answer">
+          Yes! All bonuses worth Rs 45,000/- will be accessible immediately after your registration is confirmed. You'll receive login credentials to access the bonus content in your registered email address. You can start implementing these strategies right away while waiting for the workshop to begin.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <div class="question-text">Is this workshop suitable for beginners?</div>
+          <div class="icon"></div>
+        </div>
+        <div class="faq-answer">
+          Absolutely! This workshop is designed for LinkedIn users of all levels. If you're just starting out, you'll build a strong foundation. If you already have some experience, you'll learn advanced strategies to take your LinkedIn presence to the next level. The content is structured to provide value regardless of your current expertise.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <div class="question-text">Can I get a refund if I'm not satisfied?</div>
+          <div class="icon"></div>
+        </div>
+        <div class="faq-answer">
+          We offer a 7-day money-back guarantee. If you're not completely satisfied with the workshop content, simply email our support team within 7 days of your purchase, and we'll process your refund with no questions asked. Your satisfaction is our top priority.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <div class="question-text">Will there be live sessions or is it pre-recorded?</div>
+          <div class="icon"></div>
+        </div>
+        <div class="faq-answer">
+          The workshop includes both pre-recorded training modules that you can access at your convenience and live Q&A sessions where you can interact directly with the instructor. The live sessions are scheduled at different times to accommodate various time zones, and recordings will be available if you can't attend.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const questions = document.querySelectorAll('.faq-question');
+      
+      questions.forEach(question => {
+        question.addEventListener('click', () => {
+          // Toggle active class on the clicked question
+          question.classList.toggle('active');
+          
+          // Get the answer associated with this question
+          const answer = question.nextElementSibling;
+          
+          // Toggle active class on the answer
+          answer.classList.toggle('active');
+          
+          // If this question is now active, close all other questions
+          if (question.classList.contains('active')) {
+            questions.forEach(otherQuestion => {
+              if (otherQuestion !== question) {
+                otherQuestion.classList.remove('active');
+                otherQuestion.nextElementSibling.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
