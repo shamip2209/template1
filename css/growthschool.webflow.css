@@ -1192,7 +1192,7 @@ em {
 /* .accordion-item-content {
   overflow: hidden;
 } */
-
+/* 
 .faq-answer {
   text-align: left;
   padding-bottom: 7px;
@@ -1201,7 +1201,7 @@ em {
   font-family: DM Sans, sans-serif;
   font-size: 22px;
   line-height: 140%;
-}
+} */
 
 .column-18 {
   background-color: #565656;
@@ -27800,18 +27800,6 @@ em {
 .image-187 {
   position: absolute;
   inset: auto auto 0% -18%;
-}
-
-.faq-question {
-  text-align: left;
-  cursor: pointer;
-  border-bottom: 1px solid #000;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  position: relative;
 }
 
 .answer-faq {
