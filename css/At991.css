@@ -33,10 +33,6 @@
       font-size: 20px;
     }
   
-    .bonus-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  
     .text-block-32 {
       font-size: 20px;
     }

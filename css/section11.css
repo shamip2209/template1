@@ -1,0 +1,108 @@
+.bonus-grid {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    display: grid;
+  }
+  @media screen and (max-width: 479px) {
+      .bonus-grid {
+          grid-column-gap: 16px;
+          grid-row-gap: 16px;
+          grid-template-columns:1fr; 
+          margin-top: 24px;
+          margin-bottom: 32px;
+          
+      }
+  }
+  
+  
+  @media screen and (max-width: 991px) {
+    .bonus-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+  }
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .bonus-card {
+    background-image: linear-gradient(320deg, #4562f34d, #fff);
+    border-radius: 15px;
+    overflow: hidden;
+    height: 350px;
+  }
+  .bonus-img-bg {
+    background: linear-gradient(119deg, #012e46, #151b1e);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    display: flex;
+    position: relative;
+    
+  }
+  
+  .text-block-31 {
+    color: #fafafa;
+    font-family: DM Sans, sans-serif;
+    font-size: 14px;
+    position: absolute;
+    inset: 14px auto auto 16px;
+  }
+  
+  .overlay {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+  
+  .container:hover .overlay {
+    height: 100%;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .bonus-content {
+    margin-bottom: 36px;
+    font-family: DM Sans, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  .value-heading {
+    color: #004179;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .value-text {
+    color: #00acb4;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: line-through;
+  }

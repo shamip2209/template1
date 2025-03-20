@@ -13,6 +13,27 @@
   margin-bottom: 80px;
   display: grid;
 }
+@media screen and (max-width: 479px) {
+    .bonus-grid {
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        /* grid-template-columns:; Only one card per row */
+        margin-top: 24px;
+        margin-bottom: 32px;
+        .bonus-card {
+          width: 400px;
+          margin: 20px;
+  
+          }
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+  .bonus-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+}
 .container {
   position: relative;
   width: 100%;
@@ -57,7 +78,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #008CBA;
+  background-color: #1fc0ab;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -69,7 +90,7 @@
 }
 
 .text {
-  color: white;
+color:  #ffe18d;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -88,13 +109,13 @@
 }
 
 .value-heading {
-  color: #004179;
+  color: #393636;
   margin-bottom: 8px;
   font-size: 13px;
   font-weight: 500;
 }
 .value-text {
-  color: #00acb4;
+  color: #2282dc;
   font-size: 17px;
   font-weight: 500;
   text-decoration: line-through;
@@ -202,7 +223,3 @@
 
 </body>
 </html>
- <!-- <img src="../images/hourglass.svg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Hello World</div>
-  </div> -->
