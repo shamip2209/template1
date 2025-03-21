@@ -445,10 +445,6 @@
       display: none;
     }
   
-    .meet-mentori-flex2 {
-      grid-template-columns: 1fr 1fr;
-    }
-  
     .link-hero-cta.hidden {
       display: none;
     }

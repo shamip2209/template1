@@ -1,0 +1,320 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    /* Base styling for Meet Your Mentor section */
+    .section-8.blue-bg {
+      background-color: #141313;
+      padding: 80px 20px;
+      overflow: hidden;
+    }
+    .section-subtitle {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 60px;
+      text-align: center;
+      color: #666;
+  }
+    .search {
+      position: relative;
+    }
+    
+    .search-box {
+      color: #fff;
+      background-color: #283b44;
+      background-position: 50px;
+      background-repeat: no-repeat;
+      background-size: 22px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 780px;
+      height: 60px;
+      margin-top: 52px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 90px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    
+    .search-box::placeholder {
+      color: #a3a3a3;
+    }
+    
+    
+    /* Search form styling */
+    .search.w-form {
+      max-width: 400px;
+      margin: 0 auto 40px;
+      position: relative;
+    }
+   
+    .search-box.w-input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      font-size: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .search-button.w-button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      background: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 15px;
+      cursor: pointer;
+      transition:background 0.3s ease;
+    }
+    
+    .search-button.w-button:hover {
+      background: #004dc3;
+    }
+   
+      .w-form-2 {
+        margin: 40px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+    
+    /* Mentor credentials flex container */
+    .meet-mentori-flex2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+    
+    .image-96 {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 25px;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 4px 20px rgba(0, 102, 255, 0.2);
+    }
+    
+    /* Mentor credentials blocks */
+    .meet-mentori-cred-block-2 {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 100px;
+      transition: transform 0.3s ease;
+    }
+    
+    .meet-mentori-cred-block-2:hover {
+      transform: translateY(-5px);
+    }
+    
+    .mentor-cred-hidden-2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    
+    .blue-text-span-3 {
+       color:#014887;
+    }
+    .text-block-34 {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+      .text-block-34.text-small {
+          font-family: DM Sans, sans-serif;
+          font-size: 20px;
+          line-height: 30px;
+        }
+            
+    .image-95 {
+      width: 20px;
+      margin-top: 5px;
+    }
+    
+    /* Bio section */
+    .div-block-49 {
+      color: #333;
+      background-color: rgb(255, 255, 255);
+      margin: 15px 10px 10px 10px;
+      padding: 25px;
+      font-family: DM Sans, sans-serif;
+      font-size: 22px;
+      box-shadow: 0 5px 25px rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    
+    .div-block-165 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+    
+    .div-block-165 img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    .final-price {
+      font-size: 24px;
+    }
+    
+    .strike-span {
+      text-decoration: line-through;
+      opacity: 0.7;
+      font-size: 16px;
+      margin-left: 5px;
+    }
+    
+    /* Responsive styles */
+    @media screen and (max-width: 991px) {
+      .section-heading-2 {
+        font-size: 36px;
+      }
+      
+      .div-block-165 {
+        grid-template-columns: 1fr;
+      }
+      
+      .image-96 {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    
+    @media screen and (max-width: 767px) {
+      .section-8.blue-bg {
+        padding: 60px 15px;
+      }
+      .section-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+      
+      .meet-mentori-flex2 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .search.w-form {
+        max-width: 100%;
+      }
+      
+      .section-heading-2 {
+        font-size: 32px;
+      }
+      
+      .div-block-49 {
+        padding: 20px;
+      }
+    }
+    /* Media query for screens between 450px and 713px */
+@media screen and (min-width: 450px) and (max-width: 845px) {
+  /* Reset the container */
+  .meet-mentori-flex2 {
+    display: block;
+    text-align: center;
+    /* Use padding instead of relative/absolute positioning to ensure no overlap */
+    padding-top: 0;
+  }
+  
+  /* Style the image at the top */
+  .meet-mentori-flex2 > img.image-96 {
+    display: block;
+    margin: 0 auto 30px auto; /* Center horizontally with bottom margin */
+    position: static; /* Remove any absolute positioning */
+  }
+  
+  /* Create a row layout for all credential blocks */
+  .meet-mentori-flex2 > .meet-mentori-cred-block-2 {
+    display: inline-block;
+    width: 20%; /* Slightly less than 25% to allow for spacing */
+    margin: 0 1%;
+    vertical-align: top;
+    text-align: center;
+  }
+}
+
+/* For smaller screens (below 450px) */
+@media screen and (max-width: 536px) {
+  .meet-mentori-flex2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .meet-mentori-flex2 > img.image-96 {
+    margin-bottom: 15px;
+  }
+  
+  .meet-mentori-flex2 > .meet-mentori-cred-block-2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .search-box {
+    background-position: 20px;
+    background-size: 14px;
+    margin-top: 24px;
+    padding-left: 60px;
+    font-size: 14px;
+  }
+  .search {
+    margin-top: 0;
+  }
+  
+  .section-heading-2 {
+    font-size: 28px;
+  }
+  
+  .mentor-cred-hidden-2 {
+    font-size: 18px;
+  }
+  
+  .search-box.w-input {
+    font-size: 14px;
+  }
+  
+  .final-price {
+    font-size: 20px;
+  }
+  .div-block-49 {
+    margin: 0px;
+    padding: 25px;
+    font-family: DM Sans, sans-serif;
+    border-radius: 6px;
+  }
+  .div-block-165 {
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .div-block-165 img {
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+}
+  
