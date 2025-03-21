@@ -18,6 +18,7 @@
       margin-bottom: 8px;
       font-family: DM Sans, sans-serif;
       font-size: 22px;
+      line-height: 24px;
     }
 
     .faq-container {
@@ -90,7 +91,7 @@
         transition: all 0.3s ease;
     }
     .faq-question.active .icon::after {
-      background-color: #4562f3;
+      background-color: #ff0000;
     } 
 
     .icon::before {
@@ -113,15 +114,15 @@
       overflow: hidden;
       transition: max-height 0.3s ease, padding 0.3s ease;
       padding: 0 25px;
-      background-color: rgb(201, 201, 201);
+      background-image: linear-gradient(to right, #004179, #0f6993);
       text-align: left;
-      top: -20px;
-      color: #666;
+      color: #ffffff;
       line-height: 1.6;
       font-size: 16px;
       padding-left:16px ;
       border-radius: 0px 0px 10px 10px; 
       font-size: 16px;
+      padding-top: 8px;
       }
       .faq-answer-2 {
         text-align: left;
