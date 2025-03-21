@@ -1,184 +1,13 @@
-<style>
-  .faq-answer-2 {
-    text-align: left;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 32px;
-    font-family: DM Sans, sans-serif;
-    font-size: 18px;
-    line-height: 20px;
-  }
-
-  .section-heading-2 {
-  text-align: center;
-  font-size: 36px;
-  line-height: 1.3;
-}
-  .faq-section {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-    }
-
-    .faq-title {
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 8px;
-      font-family: DM Sans, sans-serif;
-      font-size: 22px;
-    }
-
-    .faq-container {
-      grid-column-gap: 16px;
-      grid-row-gap: 8px;
-      flex-direction: column;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr;
-      grid-auto-columns: 1fr;
-      align-self: center;
-      justify-items: center;
-      width: 100%;
-      margin-top: 32px;
-      display: grid;
-        }
-
-        .faq-item {
-            background-color: #f8f8f8;
-            border-radius: 10px;
-            width: 100%;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-/* Question Container */
-      .faq-question {
-          cursor: pointer;
-          text-align: left;
-          justify-content: space-between;
-          align-items: center;
-          padding: 16px 32px;
-          font-family: DM Sans, sans-serif;
-          display: flex;
-          transition: all 0.3s ease;
-      }
-
-    .faq-question:hover {
-      background-color: #cdcaca;
-    }
-
-    .faq-question.active {
-      background-color: #dfdfdf;
-      font-weight: 600;
-    }
-
-   /* Text Styling */
-      .question-text {
-          flex: 1;
-          margin: 0;
-          font-size: 18px;
-          font-weight: 550;
-          line-height: 26px;
-      }
-
-    .icon {
-     
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 15px;
-      transition: all 0.3s ease;
-    }
-    
-    .icon::before, .icon::after {
-        content: '';
-        position: absolute;
-        background-color: #666;
-        transition: all 0.3s ease;
-    }
-    .faq-question.active .icon::after {
-      background-color: #4562f3;
-    } 
-
-    .icon::before {
-    width: 16px;
-    height: 2px;
-      }
-
-      .icon::after {
-          width: 2px;
-          height: 16px;
-      }
-
-      /* Rotate Icon on Active */
-      .faq-question.active .icon::after {
-          transform: rotate(90deg);
-      }
-      
- .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-      padding: 0 25px;
-      background-color: rgb(201, 201, 201);
-      text-align: left;
-      top: -20px;
-      color: #666;
-      line-height: 1.6;
-      font-size: 16px;
-      padding-left:16px ;
-      border-radius: 0px 0px 10px 10px; 
-      font-size: 16px;
-      }
-
-
-    .faq-answer.active {
-      max-height: 400px;
-    }
-
-  @media screen and (max-width: 479) {
-    .faq-item {
-      cursor: default;
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-    .question-text {
-      margin-right: 8px;
-      font-size: 16px;
-    }
-    .faq-answer-2 {
-      padding-left: 16px;
-      font-size: 16px;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .faq-answer-content{
-      margin-right: 0;
-    }
-    /* .section-heading-2 {
-      font-size: 20px;
-    } */
-  
-  } 
-     
-    /* .faq-anwer-content{
-      overflow: hidden;
-    } */
-</style>
-
 <div class="section-8">
   <div class="site-wrapper">
-    <h2 class="section-heading-2">
-      Frequently Asked Questions<br />(FAQ)<br />
-    </h2>
+    <h2 class="section-heading-2">Frequently Asked Questions (FAQ)</h2>
     <div class="faq-title">
       I’ve tried my best to answer all frequently asked questions. For further
       queries, please email me at:
-      <a href="mailto:dummy@example.com">dummy@example.com</a> . My amazing
-      support team will reply within 12 hours. 🙂<br />
+      <a href="mailto:dummy@example.com">dummy@example.com</a>. My amazing
+      support team will reply within 12 hours. 🙂
     </div>
+
     <section class="faq-container">
       <div class="faq-item">
         <div class="faq-question">
@@ -186,17 +15,17 @@
           <div class="icon"></div>
         </div>
         <div class="faq-answer">
-          <p class="faq-answer-2">Yes! All bonuses worth Rs 45,000/- will be accessible immediately after your registration is confirmed. You'll receive login credentials to access the bonus content in your registered email address. You can start implementing these strategies right away while waiting for the workshop to begin.</p>
+          <p class="faq-answer-2">Yes! All bonuses worth Rs 45,000/- will be accessible immediately after your registration is confirmed...</p>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <div class="question-text">How can i enroll to this programme ?</div>
+          <div class="question-text">How can I enroll in this program?</div>
           <div class="icon"></div>
         </div>
         <div class="faq-answer">
-          <p class="faq-answer-2">Yes! All bonuses worth Rs 45,000/- will be accessible immediately after your registration is confirmed. You'll receive login credentials to access the bonus content in your registered email address. You can start implementing these strategies right away while waiting for the workshop to begin.</p>
+          <p class="faq-answer-2">You can enroll through our website...</p>
         </div>
       </div>
 
@@ -206,7 +35,7 @@
           <div class="icon"></div>
         </div>
         <div class="faq-answer">
-          <p class="faq-answer-2">Absolutely! This workshop is designed for LinkedIn users of all levels. If you're just starting out, you'll build a strong foundation. If you already have some experience, you'll learn advanced strategies to take your LinkedIn presence to the next level. The content is structured to provide value regardless of your current expertise.</p>
+          <p class="faq-answer-2">Absolutely! This workshop is designed for all levels...</p>
         </div>
       </div>
 
@@ -216,7 +45,7 @@
           <div class="icon"></div>
         </div>
         <div class="faq-answer">
-          <p class="faq-answer-2">We offer a 7-day money-back guarantee. If you're not completely satisfied with the workshop content, simply email our support team within 7 days of your purchase, and we'll process your refund with no questions asked. Your satisfaction is our top priority.</p>
+          <p class="faq-answer-2">We offer a 7-day money-back guarantee...</p>
         </div>
       </div>
 
@@ -226,41 +55,9 @@
           <div class="icon"></div>
         </div>
         <div class="faq-answer">
-          <p class="faq-answer-2">The workshop includes both pre-recorded training modules that you can access at your convenience and live Q&A sessions where you can interact directly with the instructor. The live sessions are scheduled at different times to accommodate various time zones, and recordings will be available if you can't attend.</p>
+          <p class="faq-answer-2">The workshop includes both pre-recorded and live Q&A sessions...</p>
         </div>
       </div>
     </section>
-    </div>
-    
-      
-   
-  
   </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const questions = document.querySelectorAll('.faq-question');
-    
-    questions.forEach(question => {
-      question.addEventListener('click', () => {
-        // Toggle active class on the clicked question
-        question.classList.toggle('active');
-        
-        // Get the answer associated with this question
-        const answer = question.nextElementSibling;
-        
-        // Toggle active class on the answer
-        answer.classList.toggle('active');
-        
-        // If this question is now active, close all other questions
-        if (question.classList.contains('active')) {
-          questions.forEach(otherQuestion => {
-            if (otherQuestion !== question) {
-              otherQuestion.classList.remove('active');
-              otherQuestion.nextElementSibling.classList.remove('active');
-            }
-          });
-        }
-      });
-    });
-  });
-</script>
+</div>
