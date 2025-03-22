@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/At767.css" type="text/css">
     <link rel="stylesheet" href="css/At991.css" type="text/css">
     <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/Slider.css">
  
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
@@ -496,11 +497,45 @@
       <!-- <div data-delay="3000" data-animation="slide" class="slider-4 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true"> -->
     <!-- Slideshow container -->
 
-  <div class="iframe-contaienr">
-        <iframe src="/components/Slider.html" frameborder="0" height="900px" width="100%" scrolling="no"></iframe>
-  </div>
+    <div class="slider">
+      <div class="slideshow-container" id="slider-container-2">
+        <div class="mySlides-2">
+          <img src="images/message1.jpg" alt="Slide 1">
+        </div>
       
-      <script src="/js/Slider.js" defer></script>
+        <div class="mySlides-2">
+          <img src="images/message2.jpg" alt="Slide 2">
+        </div>
+      
+        <div class="mySlides-2">
+          <img src="images/message3.jpg" alt="Slide 3">
+        </div>
+        
+        <div class="mySlides-2">
+          <img src="images/message2.jpg" alt="Slide 4">
+        </div>
+      
+        <div class="mySlides-2">
+          <img src="images/message3.jpg" alt="Slide 5">
+        </div>
+      
+        <div class="mySlides-2">
+          <img src="images/message2.jpg" alt="Slide 6">
+        </div>
+      </div>
+      
+  
+      <div class="dot-container">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+      
+      <script src="js/Slider.js" defer></script>
       <br>
       <a data-payment="1" href="#" class="cta-big-3 payment-button w-inline-block">
         <div>Jump Into The 5-Day LinkedIn Workshop For A Tiny ₹<span class="final-price">249</span> <span class="strike-span hide-this">Rs 1999</span></div>
@@ -508,16 +543,6 @@
       </a>
     </div>
   </div>
-
-      <!-- <div id="checkbox"></div>
-
-      <script>
-        fetch("checkbox.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("checkbox").innerHTML = data;
-          });
-      </script> -->
 
       <!--section9.html -->
 
