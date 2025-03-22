@@ -1,0 +1,1263 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructor Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base styles and reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f0f2f5;
+      background-image: 
+        radial-gradient(at 10% 30%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+        radial-gradient(at 90% 80%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+    }
+    
+    /* Main container */
+    .course-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      background-color: #fff;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .decorative-element {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #6366f1);
+      background-size: 200% 100%;
+      animation: gradientMove 10s ease infinite;
+    }
+    
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%}
+      50% {background-position: 100% 50%}
+      100% {background-position: 0% 50%}
+    }
+    
+    /* Hero section */
+    .hero-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Left section */
+    .hero-content {
+      flex: 1 1 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    /* Redesigned Instructor profile section */
+    .instructor-profile {
+      margin-bottom: 2.5rem;
+      background: linear-gradient(145deg, #f8fafc, #eef2ff);
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.1);
+      position: relative;
+    }
+    
+    .profile-banner {
+      height: 80px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      position: relative;
+    }
+    
+    .profile-content {
+      display: flex;
+      padding: 0 1.5rem 1.5rem;
+      position: relative;
+    }
+    
+    .profile-photo-wrapper {
+      margin-top: -40px;
+      margin-right: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .profile-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+    }
+    
+    .profile-info {
+      flex: 1;
+      padding-top: 1rem;
+    }
+    
+    .instructor-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+      display: inline-block;
+    }
+    
+    .instructor-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #6366f1;
+      margin-bottom: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .instructor-title:before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: #6366f1;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    
+    .instructor-bio {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #64748b;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    
+    .social-link {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 50%;
+      color: #6366f1;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      transform: translateY(-3px);
+      background-color: #6366f1;
+      color: #fff;
+      box-shadow: 0 6px 15px rgba(99, 102, 241, 0.2);
+    }
+    
+    .badge {
+      position: absolute;
+      right: 1.5rem;
+      top: 1rem;
+      background: #fff;
+      border-radius: 2rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #6366f1;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+    
+    .badge i {
+      font-size: 0.9rem;
+      color: #eab308;
+    }
+    
+    /* Course highlights */
+    .highlights-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+    
+    .course-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      background-color: #f8f9fa;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    
+    .highlight-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      background-color: #fff;
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+    
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    }
+    
+    .highlight-text {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    
+    /* Stats */
+    .stats-container {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(to right, #f8fafc, #eef2ff);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+    
+    .stat-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    
+    .stat-item:not(:last-child):after {
+      content: '';
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 70%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(203, 213, 225, 0.7), transparent);
+    }
+    
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #6366f1, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 0.95rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    
+    /* Right section */
+    .hero-media {
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-top: 56.25%;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .video-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .video-container:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      z-index: 1;
+      pointer-events: none;
+      border-radius: 1.2rem;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* CTA section */
+    .cta-container {
+      background: linear-gradient(145deg, #f8fafc 0%, #eef2ff 100%);
+      padding: 2rem;
+      border-radius: 1.2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(226, 232, 240, 0.7);
+    }
+    
+    .cta-container:before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      border-radius: 50%;
+    }
+    
+    .cta-message {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #334155;
+      line-height: 1.7;
+    }
+    
+    .deadline {
+      font-weight: 700;
+      color: #1e293b;
+      position: relative;
+      padding: 0 3px;
+    }
+    
+    .deadline:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: rgba(139, 92, 246, 0.2);
+      z-index: -1;
+      border-radius: 2px;
+    }
+    
+    .bonus-highlight {
+      color: #8b5cf6;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+    
+    .bonus-highlight:before {
+      content: '🎁';
+      font-size: 0.9rem;
+      margin-right: 4px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 1.1rem 2.5rem;
+      border-radius: 0.8rem;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+    }
+    
+    .cta-button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .cta-button:hover:before {
+      left: 100%;
+    }
+    
+    .price {
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    
+    .original-price {
+      text-decoration: line-through;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      margin-left: 0.5rem;
+      font-weight: 400;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .course-container {
+        margin: 1.5rem;
+        padding: 1.5rem;
+      }
+      
+      .course-highlights {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.2rem;
+      }
+      
+      .stat-item:after {
+        display: none;
+      }
+      
+      .hero-content, .hero-media {
+        flex: 1 1 100%;
+      }
+      
+      .profile-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .profile-photo-wrapper {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .social-links {
+        justify-content: center;
+      }
+      
+      .badge {
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .instructor-name {
+        font-size: 1.7rem;
+      }
+      
+      .stat-number {
+        font-size: 1.8rem;
+      }
+      
+      .highlight-item {
+        padding: 1rem;
+      }
+      
+      .icon-container {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .cta-button {
+        padding: 1rem 1.8rem;
+        width: 100%;
+      }
+      
+      .cta-message {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="course-container">
+    <div class="decorative-element"></div>
+    <div class="hero-container">
+       Left section with course details 
+      <div class="hero-content">
+        Completely redesigned Instructor profile card
+        <div class="instructor-profile">
+          <div class="profile-banner"></div>
+          <div class="profile-content">
+            <div class="profile-photo-wrapper">
+              <img src="/api/placeholder/400/400" alt="Ajmal Isudheen" class="profile-photo">
+            </div>
+            <div class="profile-info">
+              <h2 class="instructor-name">Ajmal Isudheen</h2>
+              <div class="badge">
+                <i class="fa-solid fa-certificate"></i>
+                Verified Instructor
+              </div>
+              <p class="instructor-title">Business Management Consultant</p>
+              <p class="instructor-bio">
+                Corporate Trainer with over 15 years of experience in business strategies and management. Founder and CEO of Sythe Group of Companies with expertise in entrepreneurship and leadership training.
+              </p>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fa-solid fa-globe"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="highlights-title">Course Details</h3>
+        <div class="course-highlights">
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="highlight-text">5 Days Intensive Training</div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <div class="highlight-text">Pre-recorded videos + Zoom Q&A</div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <div class="highlight-text">Starting Jan 21st, 2024</div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <div class="highlight-text">7 PM IST (3 Hour Stream)</div>
+          </div>
+        </div>
+        
+     
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number">4k+</div>
+            <div class="stat-label">Students Enrolled</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number">15M+</div>
+            <div class="stat-label">Impressions</div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="hero-media">
+        <div class="video-container">
+          <iframe src="images/Land1.mp4" title="Course Introduction" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        
+
+        <div class="cta-container">
+          <p class="cta-message">
+            Reserve your seat before <span class="deadline">August 22, 2022</span> and unlock
+            <span class="bonus-highlight">Bonuses worth ₹45,000</span>
+          </p>
+          <a href="#" class="cta-button">
+            <span class="price">Reserve Seat for ₹249</span>
+            <span class="original-price">₹1,999</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructor Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base styles and reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-image: url('/api/placeholder/1920/1080');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* Background image is fixed */
+      background-repeat: no-repeat;
+    }
+    
+    /* Main container */
+    .course-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .decorative-element {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #6366f1);
+      background-size: 200% 100%;
+      animation: gradientMove 10s ease infinite;
+    }
+    
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%}
+      50% {background-position: 100% 50%}
+      100% {background-position: 0% 50%}
+    }
+    
+    /* Hero section */
+    .hero-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Left section */
+    .hero-content {
+      flex: 1 1 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    /* Redesigned Instructor profile section */
+    .instructor-profile {
+      margin-bottom: 2.5rem;
+      background: linear-gradient(145deg, #f8fafc, #eef2ff);
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.1);
+      position: relative;
+    }
+    
+    .profile-banner {
+      height: 80px;
+      background-image: url('/api/placeholder/1200/300');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .profile-content {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      position: relative;
+    }
+    
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .profile-title {
+      flex: 1;
+    }
+    
+    .instructor-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+      display: inline-block;
+    }
+    
+    .instructor-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #6366f1;
+      margin-bottom: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .instructor-title:before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: #6366f1;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    
+    .profile-photo-wrapper {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+      align-self: center;
+    }
+    
+    .profile-photo {
+      width: 240px;
+      height: 160px;
+      border-radius: 12px; /* Rectangular with rounded corners */
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+    }
+    
+    .profile-info {
+      flex: 1;
+    }
+    
+    .instructor-bio {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #64748b;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    
+    .social-link {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 50%;
+      color: #6366f1;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      transform: translateY(-3px);
+      background-color: #6366f1;
+      color: #fff;
+      box-shadow: 0 6px 15px rgba(99, 102, 241, 0.2);
+    }
+    
+    .badge {
+      background: #fff;
+      border-radius: 2rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #6366f1;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+    
+    .badge i {
+      font-size: 0.9rem;
+      color: #eab308;
+    }
+    
+    /* Course highlights */
+    .highlights-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+    
+    .course-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      background-color: #f8f9fa;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    
+    .highlight-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      background-color: #fff;
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+    
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    }
+    
+    .highlight-text {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    
+    /* Stats */
+    .stats-container {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(to right, #f8fafc, #eef2ff);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+    
+    .stat-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    
+    .stat-item:not(:last-child):after {
+      content: '';
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 70%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(203, 213, 225, 0.7), transparent);
+    }
+    
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #6366f1, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 0.95rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    
+    /* Right section */
+    .hero-media {
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-top: 56.25%;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .video-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .video-container:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      z-index: 1;
+      pointer-events: none;
+      border-radius: 1.2rem;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* CTA section */
+    .cta-container {
+      background: linear-gradient(145deg, #f8fafc 0%, #eef2ff 100%);
+      padding: 2rem;
+      border-radius: 1.2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(226, 232, 240, 0.7);
+    }
+    
+    .cta-container:before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      border-radius: 50%;
+    }
+    
+    .cta-message {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #334155;
+      line-height: 1.7;
+    }
+    
+    .deadline {
+      font-weight: 700;
+      color: #1e293b;
+      position: relative;
+      padding: 0 3px;
+    }
+    
+    .deadline:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: rgba(139, 92, 246, 0.2);
+      z-index: -1;
+      border-radius: 2px;
+    }
+    
+    .bonus-highlight {
+      color: #8b5cf6;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+    
+    .bonus-highlight:before {
+      content: '🎁';
+      font-size: 0.9rem;
+      margin-right: 4px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 1.1rem 2.5rem;
+      border-radius: 0.8rem;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+    }
+    
+    .cta-button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .cta-button:hover:before {
+      left: 100%;
+    }
+    
+    .price {
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    
+    .original-price {
+      text-decoration: line-through;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      margin-left: 0.5rem;
+      font-weight: 400;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .course-container {
+        margin: 1.5rem;
+        padding: 1.5rem;
+      }
+      
+      .course-highlights {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.2rem;
+      }
+      
+      .stat-item:after {
+        display: none;
+      }
+      
+      .hero-content, .hero-media {
+        flex: 1 1 100%;
+      }
+      
+      .profile-photo-wrapper {
+        align-self: center;
+      }
+      
+      .profile-photo {
+        width: 200px;
+        height: 140px;
+      }
+      
+      .social-links {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .instructor-name {
+        font-size: 1.7rem;
+      }
+      
+      .stat-number {
+        font-size: 1.8rem;
+      }
+      
+      .highlight-item {
+        padding: 1rem;
+      }
+      
+      .icon-container {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .cta-button {
+        padding: 1rem 1.8rem;
+        width: 100%;
+      }
+      
+      .cta-message {
+        font-size: 1rem;
+      }
+      
+      .profile-photo {
+        width: 100%;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="course-container">
+    <div class="decorative-element"></div>
+    <div class="hero-container">
+      <!-- Left section with course details -->
+      <div class="hero-content">
+        <!-- Redesigned Instructor profile card with photo under name -->
+        <div class="instructor-profile">
+          <div class="profile-banner"></div>
+          <div class="profile-content">
+            <div class="profile-header">
+              <div class="profile-title">
+                <h2 class="instructor-name">Ajmal Isudheen</h2>
+                <p class="instructor-title">Business Management Consultant</p>
+              </div>
+              <div class="badge">
+                <i class="fa-solid fa-certificate"></i>
+                Verified Instructor
+              </div>
+            </div>
+            
+            <!-- Photo moved under the name -->
+            <div class="profile-photo-wrapper">
+              <img src="/api/placeholder/400/300" alt="Ajmal Isudheen" class="profile-photo">
+            </div>
+            
+            <div class="profile-info">
+              <p class="instructor-bio">
+                Corporate Trainer with over 15 years of experience in business strategies and management. Founder and CEO of Sythe Group of Companies with expertise in entrepreneurship and leadership training.
+              </p>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fa-solid fa-globe"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Course highlights -->
+        <h3 class="highlights-title">Course Details</h3>
+        <div class="course-highlights">
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="highlight-text">5 Days Intensive Training</div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <div class="highlight-text">Pre-recorded videos + Zoom Q&A</div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <div class="highlight-text">Starting Jan 21st, 2024</div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="icon-container">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <div class="highlight-text">7 PM IST (3 Hour Stream)</div>
+          </div>
+        </div>
+        
+        <!-- Stats section -->
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number">4k+</div>
+            <div class="stat-label">Students Enrolled</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number">15M+</div>
+            <div class="stat-label">Impressions</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right section with video and CTA -->
+      <div class="hero-media">
+        <!-- Video container -->
+        <div class="video-container">
+          <iframe src="images/Land1.mp4" title="Course Introduction" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        
+        <!-- CTA section -->
+        <div class="cta-container">
+          <p class="cta-message">
+            Reserve your seat before <span class="deadline">August 22, 2022</span> and unlock
+            <span class="bonus-highlight">Bonuses worth ₹45,000</span>
+          </p>
+          <a href="#" class="cta-button">
+            <span class="price">Reserve Seat for ₹249</span>
+            <span class="original-price">₹1,999</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
