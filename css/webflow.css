@@ -1803,22 +1803,6 @@ textarea.w-select {
   left: 0;
 }
 
-.slideshow-container {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  cursor: grab;
-}
-
-.mySlides {
-  flex: 0 0 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.dot-container {
-  text-align: center;
-  margin-top: 10px;
-}
 
 .dot {
   height: 12px;
@@ -1829,11 +1813,6 @@ textarea.w-select {
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: #717171;
-  transform: scale(1.2);
 }
 
 /* @media screen and (max-width:540){

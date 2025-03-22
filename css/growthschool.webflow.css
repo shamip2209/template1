@@ -37358,6 +37358,10 @@ em {
   overflow: hidden;
 }
 
+i{
+  color: #1b7eb0;
+}
+
 .li_text-upper-3 {
   text-align: center;
   letter-spacing: .954px;
@@ -38588,17 +38592,6 @@ em {
 .pmc_button.pmc-light-btn.ux_btn {
   background-color: #ece7ff;
   border-color: #3e3ef8;
-}
-
-.slider-container {
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
-  flex-flow: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 330px;
-  display: flex;
-  position: relative;
 }
 
 .pmc_hero-right {
@@ -48605,3 +48598,5 @@ em {
   font-style: normal;
   font-display: swap;
 }
+
+/* Add these styles to your CSS if you don't already have them */

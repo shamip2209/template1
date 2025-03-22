@@ -1,67 +1,147 @@
-let slideIndex = 1;
+
+// Slider properties
+let slideIndex = 0;
+const slides = document.getElementsByClassName("mySlides-2");
+const dots = document.getElementsByClassName("dot");
+const sliderContainer = document.getElementById("slider-container-2");
+
+// Touch variables
 let startX = 0;
-let endX = 0;
-const slider = document.getElementById("slider-container");
+let currentX = 0;
+let isDragging = false;
+let dragThreshold = 50; // Minimum distance to consider as a swipe
 
-// Show first slide
-showSlides(slideIndex);
+// Initialize
+updateSlider();
 
-// Touch start event
-slider.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-// Touch end event
-slider.addEventListener("touchend", (e) => {
-  endX = e.changedTouches[0].clientX;
-  handleSwipe();
-});
-
-// Mouse events for dragging (Desktop)
-slider.addEventListener("mousedown", (e) => {
-  startX = e.clientX;
-});
-slider.addEventListener("mouseup", (e) => {
-  endX = e.clientX;
-  handleSwipe();
-});
-
-// Handle swipe gesture
-function handleSwipe() {
-  let diff = startX - endX;
-  if (diff > 50) {
-    plusSlides(1); // Swipe left (Next slide)
-  } else if (diff < -50) {
-    plusSlides(-1); // Swipe right (Previous slide)
+// Function to update the slider display
+function updateSlider() {
+  // Move the slider container
+  sliderContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+  
+  // Update dot indicators
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
   }
+  dots[slideIndex].classList.add("active");
 }
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+// Function to show a specific slide
+function currentSlide(index) {
+  slideIndex = index;
+  updateSlider();
 }
 
-// Dot navigation
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+// Touch event handlers
+sliderContainer.addEventListener("touchstart", handleTouchStart, false);
+sliderContainer.addEventListener("touchmove", handleTouchMove, false);
+sliderContainer.addEventListener("touchend", handleTouchEnd, false);
+
+// Mouse event handlers (for desktop testing)
+sliderContainer.addEventListener("mousedown", handleMouseDown, false);
+sliderContainer.addEventListener("mousemove", handleMouseMove, false);
+sliderContainer.addEventListener("mouseup", handleMouseUp, false);
+sliderContainer.addEventListener("mouseleave", handleMouseUp, false);
+
+// Touch event functions
+function handleTouchStart(e) {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+  
+  // Disable transition during dragging for more responsive feel
+  sliderContainer.style.transition = "none";
 }
 
-// Show slides function
-function showSlides(n) {
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function handleTouchMove(e) {
+  if (!isDragging) return;
+  
+  currentX = e.touches[0].clientX;
+  let diffX = currentX - startX;
+  
+  // Calculate how much to move (limited range to prevent dragging too far)
+  let translateX = -slideIndex * 100 + (diffX / sliderContainer.offsetWidth * 100);
+  
+  // Resistance at the edges
+  if (slideIndex === 0 && diffX > 0) {
+    translateX = translateX * 0.3; // More resistance at start
+  } else if (slideIndex === slides.length - 1 && diffX < 0) {
+    translateX = -slideIndex * 100 + (diffX / sliderContainer.offsetWidth * 100) * 0.3; // More resistance at end
   }
   
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+  sliderContainer.style.transform = `translateX(${translateX}%)`;
+}
 
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].classList.add("active");
+function handleTouchEnd(e) {
+  if (!isDragging) return;
+  isDragging = false;
+  
+  // Re-enable transition for smooth movement
+  sliderContainer.style.transition = "transform 0.3s ease";
+  
+  // Calculate the distance swiped
+  let diffX = currentX - startX;
+  
+  // Determine if swipe was significant enough to change slides
+  if (Math.abs(diffX) > dragThreshold) {
+    if (diffX > 0 && slideIndex > 0) {
+      // Swiped right - go to previous slide
+      slideIndex--;
+    } else if (diffX < 0 && slideIndex < slides.length - 1) {
+      // Swiped left - go to next slide
+      slideIndex++;
+    }
+  }
+  
+  updateSlider();
+}
+
+// Mouse event functions (for desktop testing)
+function handleMouseDown(e) {
+  e.preventDefault();
+  startX = e.clientX;
+  isDragging = true;
+  sliderContainer.style.transition = "none";
+}
+
+function handleMouseMove(e) {
+  if (!isDragging) return;
+  
+  currentX = e.clientX;
+  let diffX = currentX - startX;
+  
+  // Calculate how much to move (limited range to prevent dragging too far)
+  let translateX = -slideIndex * 100 + (diffX / sliderContainer.offsetWidth * 100);
+  
+  // Resistance at the edges
+  if (slideIndex === 0 && diffX > 0) {
+    translateX = translateX * 0.3; // More resistance at start
+  } else if (slideIndex === slides.length - 1 && diffX < 0) {
+    translateX = -slideIndex * 100 + (diffX / sliderContainer.offsetWidth * 100) * 0.3; // More resistance at end
+  }
+  
+  sliderContainer.style.transform = `translateX(${translateX}%)`;
+}
+
+function handleMouseUp(e) {
+  if (!isDragging) return;
+  isDragging = false;
+  
+  // Re-enable transition for smooth movement
+  sliderContainer.style.transition = "transform 0.3s ease";
+  
+  // Calculate the distance swiped
+  let diffX = currentX - startX;
+  
+  // Determine if swipe was significant enough to change slides
+  if (Math.abs(diffX) > dragThreshold) {
+    if (diffX > 0 && slideIndex > 0) {
+      // Swiped right - go to previous slide
+      slideIndex--;
+    } else if (diffX < 0 && slideIndex < slides.length - 1) {
+      // Swiped left - go to next slide
+      slideIndex++;
+    }
+  }
+  
+  updateSlider();
 }
